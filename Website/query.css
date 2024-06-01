@@ -1,0 +1,38 @@
+@media only screen and (min-width: 365px) {
+    .header-content {
+        width: 340px;
+        margin: 0 auto;
+    }
+    .headernav {
+        width: 340px;
+        margin: 0 auto;
+        border-radius: 4px 4px 0px 0px;
+    }
+    .header-content {
+        border-radius: 0px 0px 4px 4px;
+    }
+    .SignIn {
+        border-radius: 4px;
+    }
+    .item {
+        border-radius: 4px;  
+    }
+    header {
+        transform: translateY(2rem);
+        margin-bottom: 2rem;
+    }
+    .headernav-text img {
+        transform: translate(-10px, 2px);
+    }
+    .headernav-text h1 {
+        transform: translateX(-20px);
+    }
+    .SignIn {
+        width: 340px;
+        margin: 0 auto;
+    }
+    .PeakkPro {
+        width: 340px;
+        margin: 0 auto;
+    }
+}
