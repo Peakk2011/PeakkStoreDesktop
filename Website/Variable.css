@@ -1,22 +1,25 @@
 :root,
 [data-selected-theme="green"] {
   --color-background: #0c0c0c;
-  --color-text: #fffbd1;
-  --color-accent: #000;
-  --SecColor: #fffbd1;
+  --color-text: #ffffe9;
+  --color-accent: hsl(0, 0%, 0%);
+  --SecColor: #ffffe9;
   --NavbarColor: rgba(0, 0, 0, 0.876);
   --BackgroundProces: rgba(0, 0, 0, 0.668);
   /* Button Diferent color check */
-  --button: #fffbd1; 
+  --button: #ffffe9; 
   --button-color: #000; 
     /* search */
-    --colorBackGround: #fffbd1;
-    --colorpureBackGround: #fffbd1;
-    --BorderColor: #fffbd1;
+    --colorBackGround: #ffffe9;
+    --colorpureBackGround: #ffffe9;
+    --BorderColor: #ffffe9;
     --Icon-color: #000;
     /* Selecter */
-    --Seclecter: #fffbd1;
+    --Seclecter: #ffffe9;
     --SeclecterColor: #000;
+    /* only color */
+    --slidercolor: #ffffe9;
+    --sliderborderColor: #222;
 }
 
 [data-selected-theme="blue"] {
@@ -38,6 +41,9 @@
   --Seclecter: #000;
   --SeclecterColor: #ffffe9;
   --borderfont: #44444454;
+  /* only color */
+  --slidercolor: transparent;
+  --sliderborderColor: transparent;
 }
 
 [data-selected-theme="pink"] {
@@ -58,6 +64,9 @@
     /* Selecter */
   --Seclecter: #000;
   --SeclecterColor: #ffffe9;
+    /* only color */
+    --slidercolor: transparent;
+    --sliderborderColor: transparent;
 }
 
 [data-selected-theme="orange"] {
@@ -78,6 +87,9 @@
     /* Selecter */
   --Seclecter: #000;
   --SeclecterColor: #ffffe9;
+    /* only color */
+    --slidercolor: transparent;
+    --sliderborderColor: transparent;
 }
 
 .menu-link {

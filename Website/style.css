@@ -514,7 +514,7 @@ header {
     height: 100%;
 }
 
-.wrapper:before {
+/* .wrapper:before {
     left: -3px;
     background: linear-gradient(90deg, var(--color-background), transparent);
 }
@@ -522,7 +522,7 @@ header {
 .wrapper:after {
     right: -3px;
     background: linear-gradient(-90deg, var(--color-background), transparent);
-}
+} */
 
 .items {
     position: relative;
@@ -574,6 +574,16 @@ header {
     }
 }
 
+.cropcolorSlider {
+    background-color: var(--slidercolor);
+    padding: 1rem 0px 0rem 0rem;
+    height: 207px;
+    margin-bottom: 1.6rem;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
 /* Background */
 
 #Bg1 {
@@ -582,6 +592,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 100%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg2 {
@@ -590,6 +602,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 90%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg3 {
@@ -598,6 +612,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg4 {
@@ -606,6 +622,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg5 {
@@ -614,6 +632,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg6 {
@@ -622,6 +642,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg7 {
@@ -630,6 +652,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg8 {
@@ -638,6 +662,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg9 {
@@ -646,6 +672,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg10 {
@@ -654,6 +682,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 #Bg11 {
@@ -662,6 +692,8 @@ header {
     background-size: cover;
     filter:grayscale(100%);
     opacity: 70%;
+    mix-blend-mode: multiply;
+    border: var(--sliderborderColor) solid 1px;
 }
 
 .signin-text-border h1 {
