@@ -70,6 +70,7 @@ function GetSearchOn() {
   document.getElementById("Backgro").style.visibility = "hidden"
   document.getElementById("Backgro").style.width = "0px"
   MenuLinksCloseCheck()
+    document.body.style.overflow = "hidden"
 }
 
 function CloseSearch() {
@@ -83,6 +84,7 @@ function CloseSearch() {
   document.getElementById("Backgro").style.visibility = "hidden"
   document.getElementById("Backgro").style.width = "0px"
   document.getElementById("SearchBox").style.zIndex = "2"
+  document.body.style.overflow = "scroll"
 }
 
 function LanguageSetup() {
@@ -98,11 +100,13 @@ function LanguageSetup() {
   document.getElementById("Backgro").style.width = "0px"
   document.getElementById("MainBottomNavbar").style.bottom = "0"
   MenuLinksCloseCheck()
+    document.body.style.overflow = "hidden"
 }
 
 function CloseLanguageSetup() {
   document.getElementById("LanguageToggle").style.bottom = "-160px"
   document.getElementById("LanguageToggle").style.opacity = "0"
+  document.body.style.overflow = "scroll"
 }
 
 function changeCss() {
@@ -184,6 +188,7 @@ function MenuLinksSetup() {
   ThemeCloseCheck()
   document.getElementById("MainBottomNavbar").style.bottom = "0"
   CloseLanguageSetup()
+  document.body.style.overflow = "scroll"
 }
 
 function MenuLinksCloseCheck() {
@@ -266,11 +271,9 @@ buttons.forEach((button) => {
 // Settings
 
 function setting() {
-  document.getElementById('MenuBottom').style.bottom = "-100px"
   setTimeout(function () {
     document.getElementById("MAINBODYSTYLEOUT").style.display = "none"
     document.getElementById("MAINBODYSTYLEOUT").style.zIndex = "101"
-    document.getElementById("CubeBg").style.display = "block";
     // document.getElementById("CropSetting").style.marginTop = "0rem"
   }, 900);
   setTimeout(function () {
