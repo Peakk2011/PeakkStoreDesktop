@@ -250,3 +250,7 @@ button[data-theme] {
 .header-lines-text {
     transform: translateY(-26px);
 }
+
+.settingsMenuTxt p {
+    font-family: MiSANS;
+}   

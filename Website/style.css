@@ -1012,7 +1012,7 @@ a:active {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 445px) {
     .Background-Alert {
         display: none;
     }

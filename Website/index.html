@@ -32,74 +32,45 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="developer">
-    <!-- Open Graph / Facebook -->
-    <!-- <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://peakk2011.github.io/PeakkStore/" />
-    <meta property="og:title" content="Peakk - Peakk Store" />
-    <meta property="og:description" content="Welcome to Peakk store this page is a developer tool it make for you." />
-    <meta property="og:image" content="./Image/Untitled (8).png" /> -->
-
-    <!-- Twitter -->
-    <!-- <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://peakk2011.github.io/PeakkStore/" />
-    <meta property="twitter:title" content="Peakk - Peakk Store" />
-    <meta property="twitter:description"
-        content="Welcome to Peakk store this page is a developer tool it make for you." />
-    <meta property="twitter:image" content="./Image/Untitled (8).png" /> -->
 </head>
 
 <body>
+
+    <!-- ClOSESettingsCheck() -->
 
     <div id="CropSetting">
         <!-- SETTINGS -->
         <div class="SettingBlurBac"></div>
 
-        <div class="setting" id="SettingsMainContent">
+        <div class="setting">
             <div class="setting-content">
-                <div class="setting-text">
-                    <img src="./Image/Peakk-Logo//Mask group.png" alt="">
-                    <h1>Store Setting</h1>
-                    <a onclick="ClOSESettingsCheck()"><ion-icon name="close-outline"></ion-icon></a>
-                </div>
-                <!-- <div class="setting-search">
-                    <div class="search" id="SearchOnSetting">
-                        <input type="text" class="searchTerm" id="SearchINPUTOnSet"
-                            placeholder="Type here to search tools and settings.">
-                        <button type="submit" class="searchButton" id="SearchBTNOnSet">
-                            <ion-icon name="search-sharp"></ion-icon>
-                        </button>
-                    </div>
-                </div> -->
-                <div class="settings-content">
-                    <!-- Settings Content -->
-                    <h1>Let's start with <img src="./Image/Peakk-Logo/Mask group.png" alt="">Settings</h1>
-                    <p>First one you're need to sign in or sign up if you dont have peakk store account because i'm need
-                        to know which product that you like or don't like if you not want to sign up or sign in you can
-                        continue as guest.</p>
-                    <div class="settingsContent-ButtonLoginCheck">
-                        <li><a href="./LoginStartUpPage/Login.html">Sign up</a></li>
-                        <li><a href="./LoginPage/LoginHTMLForSignIn/SignIn.html" id="OutlineTEXTSETTING">Sign in</a>
-                        </li>
-                        <li><a onclick="ClOSESettingsCheck()" id="NotRecommendTEXTSETTING">Guest</a></li>
-                    </div>
 
-                    <div class="PrefesthemeSett">
-                        <h1>Select your prefes theme</h1>
-                        <p>Information theme on settings have only forest theme your theme settings that you select will
-                            occur on main page only.</p>
-                        <button id="SettingsButtonCheck" onclick="OpenThemeSecOnSettings()">Open Theme Selecter</button>
-                    </div>
-                    <!-- Language but class is same -->
-                    <div class="PrefesthemeSett" id="LanguageSettings">
-                        <h1>Select your language</h1>
-                        <!-- <p>Information theme on settings have only forest theme your theme settings that you select will occur on main page only.</p> -->
-                        <button onclick="OpenLANGUAGEsecOnSettings()" id="SettingsButtonCheck">Open Language
-                            Selecter</button>
+                <div class="settingsNav" id="SidebarSettings">
+                    <div class="settingsNavContent">
+                        <div class="settingsicon">
+                            <p><ion-icon name="bag-handle-sharp"></ion-icon></p>
+                        </div>
+                        <div class="settingsiconslink">
+                            <div class="settingslinksiconContent">
+                                <li><a href="#"><ion-icon name="extension-puzzle-sharp"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="log-in-sharp"></ion-icon></a></li>
+                                <li><a onclick="OpenThemeSecOnSettings()"><ion-icon name="color-fill-sharp"></ion-icon></a></li>
+                                <li><a onclick="OpenLANGUAGEsecOnSettings()"><ion-icon name="language-sharp"></ion-icon></a></li>
+                                <li><a href=""><ion-icon name="id-card-sharp"></ion-icon></a></li>
+                                <li><a href=""><ion-icon name="newspaper-sharp"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="help-sharp"></ion-icon></a></li>
+                                <li><a onclick="ClOSESettingsCheck()"><ion-icon name="close-sharp"></ion-icon></a></li>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+            <!-- Settings content settings menu -->
+            <div class="settingsMenuTxt">
+                <p>Nothing to happend <br>if you not click <br> on menu bar on left side.</p>
             </div>
         </div>
-
     </div>
 
     <!-- Simbol when bottom navbar hide -->
@@ -159,6 +130,19 @@
         </div>
 
     </div>
+
+    <ul class="circles" id="CubeBg">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
     <!-- CONTENT START HERE -->
     <div id="MAINBODYSTYLEOUT">
@@ -330,19 +314,6 @@
             </div>
         </div>
 
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-
         <header>
             <div class="headernav">
                 <div class="headernav-con">
@@ -351,7 +322,8 @@
                         <h1>Store</h1>
                     </div>
                     <div class="Headernav-text-logo-href-links-on-secound-navbar-before-mainNavbar-begin">
-                        <li><a href="./Register/Regis.html"><ion-icon name="download-outline"></ion-icon>Create account</a></li>
+                        <li><a href="./Register/Regis.html"><ion-icon name="download-outline"></ion-icon>Create
+                                account</a></li>
                     </div>
                 </div>
             </div>
@@ -376,7 +348,7 @@
         </div>
 
         <div class="cropcolorSlider">
-            
+
             <div class="wrapper">
                 <ul class="items">
                     <li class="item" id="Bg1"></li>

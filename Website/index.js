@@ -50,7 +50,7 @@ function GetToggleOUST() {
 let myWindow;
 
 function OpenWindow() {
-    myWindow = window.open("index.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=420,height=840");
+    myWindow = window.open("index.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=360,height=810");
 }
 
 
@@ -266,9 +266,11 @@ buttons.forEach((button) => {
 // Settings
 
 function setting() {
+  document.getElementById('MenuBottom').style.bottom = "-100px"
   setTimeout(function () {
     document.getElementById("MAINBODYSTYLEOUT").style.display = "none"
     document.getElementById("MAINBODYSTYLEOUT").style.zIndex = "101"
+    document.getElementById("CubeBg").style.display = "block";
     // document.getElementById("CropSetting").style.marginTop = "0rem"
   }, 900);
   setTimeout(function () {
@@ -321,7 +323,7 @@ function OpenThemeSecOnSettings() {
     // language hide when click
     document.getElementById("LanguageToggle").style.bottom = "-160px"
     document.getElementById("LanguageToggle").style.opacity = "0"
-  }, 800);
+  }, 200);
 }
 
 function OpenLANGUAGEsecOnSettings() {
@@ -345,7 +347,7 @@ function OpenLANGUAGEsecOnSettings() {
       document.getElementById("Backgro").style.opacity = "1"
       document.getElementById("Backgro").style.visibility = "hidden"
       document.getElementById("Backgro").style.width = "0px"
-    }, 830);
+    }, 200);
 }
 
 // ALERTCLICK()

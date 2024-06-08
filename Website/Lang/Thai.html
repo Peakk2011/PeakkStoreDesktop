@@ -51,60 +51,43 @@
 <body>
 
     <div id="CropSetting">
-
         <!-- SETTINGS -->
         <div class="SettingBlurBac"></div>
 
-        <div class="setting" id="SettingsMainContent">
+        <div class="setting">
             <div class="setting-content">
-                <div class="setting-text">
-                    <img src="../Image/Peakk-Logo//Mask group.png" alt="">
-                    <h1>การตั้งค่า</h1>
-                    <a onclick="ClOSESettingsCheck()"><ion-icon name="close-outline"></ion-icon></a>
-                </div>
-                <!-- <div class="setting-search">
-                    <div class="search" id="SearchOnSetting">
-                        <input type="text" class="searchTerm" id="SearchINPUTOnSet"
-                            placeholder="ค">
-                        <button type="submit" class="searchButton" id="SearchBTNOnSet">
-                            <ion-icon name="search-sharp"></ion-icon>
-                        </button>
-                    </div>
-                </div> -->
-                <div class="settings-content">
-                    <!-- Settings Content -->
-                    <h1>มาเริ่มต้นด้วย<img src="../Image/Peakk-Logo/Mask group.png" alt="">การตั้งค่า</h1>
-                    <p>ก่อนอื่นคุณต้องลงชื่อเข้าใช้หรือลงทะเบียนหากคุณไม่มีบัญชีร้านค้าของ Peakk เพราะฉันต้องการ
-                        เพื่อทราบว่าผลิตภัณฑ์ใดที่คุณชอบหรือไม่ชอบหากคุณไม่ต้องการสมัครหรือลงชื่อเข้าใช้คุณสามารถทำได้
-                        ยังคงเป็นแขกรับเชิญ.</p>
-                    <div class="settingsContent-ButtonLoginCheck">
-                        <li><a href="./LoginStartUpPage/Login.html">ลงทะเบียน</a></li>
-                        <li><a href="./LoginPage/LoginHTMLForSignIn/SignIn.html" id="OutlineTEXTSETTING">เข้าสู่ระบบ</a>
-                        </li>
-                        <li><a onclick="ClOSESettingsCheck()" id="NotRecommendTEXTSETTING">แขก</a></li>
-                    </div>
 
-                    <div class="PrefesthemeSett">
-                        <h1>เลือกธีมที่คุณชอบ</h1>
-                        <p>ธีมข้อมูลเกี่ยวกับการตั้งค่ามีเพียงธีม forest การตั้งค่าธีมที่คุณเลือก
-                            เกิดขึ้นที่หน้าหลักเท่านั้นนะครับ</p>
-                        <button id="SettingsButtonCheck" onclick="OpenThemeSecOnSettings()">เปิดการเลือกธีม</button>
-                    </div>
-                    <!-- Language but class is same -->
-                    <div class="PrefesthemeSett" id="LanguageSettings">
-                        <h1>เลือกภาษา</h1>
-                        <!-- <p>Information theme on settings have only forest theme your theme settings that you select will occur on main page only.</p> -->
-                        <button onclick="OpenLANGUAGEsecOnSettings()" id="SettingsButtonCheck">ไปหน้าการเลือกภาษา</button>
+                <div class="settingsNav" id="SidebarSettings">
+                    <div class="settingsNavContent">
+                        <div class="settingsicon">
+                            <p><ion-icon name="bag-handle-sharp"></ion-icon></p>
+                        </div>
+                        <div class="settingsiconslink">
+                            <div class="settingslinksiconContent">
+                                <li><a href="#"><ion-icon name="extension-puzzle-sharp"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="log-in-sharp"></ion-icon></a></li>
+                                <li><a onclick="OpenThemeSecOnSettings()"><ion-icon name="color-fill-sharp"></ion-icon></a></li>
+                                <li><a onclick="OpenLANGUAGEsecOnSettings()"><ion-icon name="language-sharp"></ion-icon></a></li>
+                                <li><a href=""><ion-icon name="id-card-sharp"></ion-icon></a></li>
+                                <li><a href=""><ion-icon name="newspaper-sharp"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="help-sharp"></ion-icon></a></li>
+                                <li><a onclick="ClOSESettingsCheck()"><ion-icon name="close-sharp"></ion-icon></a></li>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+            <!-- Settings content settings menu -->
+            <div class="settingsMenuTxt">
+                <p>ไม่มีอะไรเกิดขื่น<br>ถ้าคุณไม้ได้ทําอะไร<br>ในเมนูด้านซ้าย</p>
             </div>
         </div>
-
     </div>
 
     <!-- Simbol when bottom navbar hide -->
 
-    <div class="SimbolBottm" onclick="OpenBottomNavbarClickCheck()">
+    <div class="SimbolBottm" onclick="OpenBottomNavbarClickCheck()" id="MenuBottom">
         <div class="SimbolText">
             <hr id="ClickToggleSim">
         </div>
@@ -145,6 +128,19 @@
         </div>
 
     </div>
+
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
     <!-- CONTENT START HERE -->
     <div id="MAINBODYSTYLEOUT">
@@ -319,19 +315,6 @@
                 <button data-theme="orange" aria-pressed="false">เรียบๆ</button>
             </div>
         </div>
-
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
 
         <header>
             <div class="headernav">

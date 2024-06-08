@@ -20,6 +20,9 @@
   /* only color */
   --slidercolor: #ffffe9;
   --sliderborderColor: #222;
+  /* Settings BG color */
+  --settingsColor: rgba(12, 12, 12, 0.192);
+  --SettingsSidebar: #111;
 }
 
 [data-selected-theme="blue"] {
@@ -44,6 +47,9 @@
   /* only color */
   --slidercolor: transparent;
   --sliderborderColor: transparent;
+  /* Settings BG color */
+  --settingsColor: rgba(249, 249, 228, 0.276);
+  --SettingsSidebar: #ffffe3;
 }
 
 [data-selected-theme="pink"] {
@@ -67,6 +73,9 @@
   /* only color */
   --slidercolor: transparent;
   --sliderborderColor: transparent;
+  /* Settings BG color */
+  --settingsColor: rgba(237, 248, 237, 0.141);
+  --SettingsSidebar: #edf8ed;
 }
 
 [data-selected-theme="orange"] {
@@ -90,6 +99,9 @@
   /* only color */
   --slidercolor: transparent;
   --sliderborderColor: transparent;
+  /* Settings BG color */
+  --settingsColor: rgb(255, 255, 255);
+  --SettingsSidebar: #F9F5EF;
 }
 
 .menu-link {
