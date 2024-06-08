@@ -1,6 +1,7 @@
 #CropSetting {
     margin-top: 70rem;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s all;
+    transition: cubic-bezier(0.33,0,0.1,1)
+    1s all;
     position: fixed;
     background-color: #060606;
 }

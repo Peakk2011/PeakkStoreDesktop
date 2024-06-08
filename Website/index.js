@@ -115,7 +115,7 @@ function changeCss() {
   var HeaderPall = document.querySelector("header"); //after >
   this.scrollY > 200 ? HeaderPall.style.opacity = 0 : HeaderPall.style.opacity = 1;
 
-  var SliderPall = document.querySelector(".wrapper"); //after >
+  var SliderPall = document.querySelector(".cropcolorSlider"); //after >
   this.scrollY > 600 ? SliderPall.style.opacity = 0 : SliderPall.style.opacity = 1;
 
   var SigninSection = document.querySelector(".SignIn"); //after >
@@ -124,8 +124,9 @@ function changeCss() {
   var TextSuggess = document.getElementById("TextNub2Suggess"); //after >
   this.scrollY > 1100 ? TextSuggess.style.opacity = 0 : TextSuggess.style.opacity = 1;
 
-  var SidebarScrollX = document.getElementById("MainNavSideOFF");
-  this.scrollX > 2 ? GetToggleON() : ThisToggleOnSlideOUT();
+  var TextAlertSec = document.querySelector(".callout"); //after >
+  this.scrollY > 1000 ? TextAlertSec.style.opacity = 0 : TextAlertSec.style.opacity = 1;
+
 }
 
 window.addEventListener("scroll", changeCss, false);
@@ -153,6 +154,7 @@ function ThemeSetupCheck() {
   document.getElementById("LanguageToggle").style.opacity = "0"
   MenuLinksCloseCheck()
   document.getElementById("MainBottomNavbar").style.bottom = "0"
+  document.body.style.overflow = "hidden"
 }
 
 function ThemeCloseCheck() {
@@ -170,6 +172,7 @@ function ThemeCloseCheck() {
   document.getElementById("SearchBox").style.opacity = "0"
   document.getElementById("SearchBox").style.top = "-140px"
   document.getElementById("SearchBox").style.zIndex = "1"
+    document.body.style.overflow = "scroll"
 }
 
 // Menu toggle
@@ -288,7 +291,8 @@ function ClOSESettingsCheck() {
   }, 100);
   setTimeout(function () {
     document.getElementById("Navbi").style.bottom = "0px";
-  }, 160);
+  }, 0);
+  ThemeCloseCheck()
 }
 
 // Theme selecter on settings

@@ -41,6 +41,7 @@ nav {
     backdrop-filter: blur(50px);
     z-index: 1;
     position: fixed;
+    border-bottom: solid 1px var(--borderfont);
 }
 
 .navbar {
