@@ -8,7 +8,6 @@
     bottom: -370px;
     right: 50%;
     transform: translateX(50%);
-    border: solid 1px #222;
     border-radius: 6px;
     z-index: 11;
 }
@@ -46,7 +45,7 @@
     font-family: Segoe ui variable;
     font-size: 26px;
     font-weight: 400;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.2px;
     color: var(--SecColor);
 }
 
@@ -56,7 +55,7 @@
 }
 
 .Menu-content hr {
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     border: solid 1px var(--SecColor);
     width: 30%;
 }
@@ -74,7 +73,7 @@
     color: var(--SecColor);
     font-family: Segoe ui variable;
     font-weight: 300;
-    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-width: 0.2px;
 }
 
 .Menu-content a ion-icon {
