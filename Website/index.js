@@ -50,7 +50,7 @@ function GetToggleOUST() {
 let myWindow;
 
 function OpenWindow() {
-    myWindow = window.open("index.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=360,height=810");
+  myWindow = window.open("index.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=360,height=810");
 }
 
 
@@ -70,7 +70,7 @@ function GetSearchOn() {
   document.getElementById("Backgro").style.visibility = "hidden"
   document.getElementById("Backgro").style.width = "0px"
   MenuLinksCloseCheck()
-    document.body.style.overflow = "hidden"
+  document.body.style.overflow = "hidden"
 }
 
 function CloseSearch() {
@@ -100,7 +100,7 @@ function LanguageSetup() {
   document.getElementById("Backgro").style.width = "0px"
   document.getElementById("MainBottomNavbar").style.bottom = "0"
   MenuLinksCloseCheck()
-    document.body.style.overflow = "hidden"
+  document.body.style.overflow = "hidden"
 }
 
 function CloseLanguageSetup() {
@@ -176,7 +176,7 @@ function ThemeCloseCheck() {
   document.getElementById("SearchBox").style.opacity = "0"
   document.getElementById("SearchBox").style.top = "-140px"
   document.getElementById("SearchBox").style.zIndex = "1"
-    document.body.style.overflow = "scroll"
+  document.body.style.overflow = "scroll"
 }
 
 // Menu toggle
@@ -330,27 +330,27 @@ function OpenThemeSecOnSettings() {
 }
 
 function OpenLANGUAGEsecOnSettings() {
-    // close settings first when toggle settings
-    document.getElementById("CropSetting").style.marginTop = "70rem"
-    setTimeout(function () {
-      document.getElementById("MAINBODYSTYLEOUT").style.display = "block"
-      document.getElementById("MAINBODYSTYLEOUT").style.zIndex = "0"
-      document.getElementById("MAINBODYSTYLEOUT").className = 'SlideAnimationBODYremove';
-      // document.getElementById("CropSetting").style.marginTop = "0rem"
-    }, 100);
-    setTimeout(function () {
-      // Language toggle
-      document.getElementById("LanguageToggle").style.bottom = "58px"
-      document.getElementById("LanguageToggle").style.opacity = "1"
-      document.getElementById("SearchBox").style.opacity = "0"
-      // close theme when language proces
-      const ThemeSetUP = document.getElementById("ThemeDevelopSETUP");
-      ThemeSetUP.style.opacity = "0"
-      ThemeSetUP.style.bottom = "-240px"
-      document.getElementById("Backgro").style.opacity = "1"
-      document.getElementById("Backgro").style.visibility = "hidden"
-      document.getElementById("Backgro").style.width = "0px"
-    }, 200);
+  // close settings first when toggle settings
+  document.getElementById("CropSetting").style.marginTop = "70rem"
+  setTimeout(function () {
+    document.getElementById("MAINBODYSTYLEOUT").style.display = "block"
+    document.getElementById("MAINBODYSTYLEOUT").style.zIndex = "0"
+    document.getElementById("MAINBODYSTYLEOUT").className = 'SlideAnimationBODYremove';
+    // document.getElementById("CropSetting").style.marginTop = "0rem"
+  }, 100);
+  setTimeout(function () {
+    // Language toggle
+    document.getElementById("LanguageToggle").style.bottom = "58px"
+    document.getElementById("LanguageToggle").style.opacity = "1"
+    document.getElementById("SearchBox").style.opacity = "0"
+    // close theme when language proces
+    const ThemeSetUP = document.getElementById("ThemeDevelopSETUP");
+    ThemeSetUP.style.opacity = "0"
+    ThemeSetUP.style.bottom = "-240px"
+    document.getElementById("Backgro").style.opacity = "1"
+    document.getElementById("Backgro").style.visibility = "hidden"
+    document.getElementById("Backgro").style.width = "0px"
+  }, 200);
 }
 
 // ALERTCLICK()
@@ -407,8 +407,8 @@ function TypefaceSetupCheck() {
 // Hide bottomNavbar when scroll
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("MainBottomNavbar").style.bottom = "0"
   } else {
@@ -421,7 +421,7 @@ function OpenBottomNavbarClickCheck() {
   setTimeout(function () {
     document.getElementById("MainBottomNavbar").style.bottom = "30px"
   }, 250);
-    document.getElementById("MainBottomNavbar").style.bottom = "-60px";
+  document.getElementById("MainBottomNavbar").style.bottom = "-60px";
 }
 
 // slider
@@ -432,7 +432,7 @@ let scrollLeft;
 const slider = document.querySelector('.items');
 
 const end = () => {
-	isDown = false;
+  isDown = false;
   slider.classList.remove('active');
 }
 
@@ -440,11 +440,11 @@ const start = (e) => {
   isDown = true;
   slider.classList.add('active');
   startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;	
+  scrollLeft = slider.scrollLeft;
 }
 
 const move = (e) => {
-	if(!isDown) return;
+  if (!isDown) return;
 
   e.preventDefault();
   const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
@@ -453,14 +453,14 @@ const move = (e) => {
 }
 
 (() => {
-	slider.addEventListener('mousedown', start);
-	slider.addEventListener('touchstart', start);
+  slider.addEventListener('mousedown', start);
+  slider.addEventListener('touchstart', start);
 
-	slider.addEventListener('mousemove', move);
-	slider.addEventListener('touchmove', move);
+  slider.addEventListener('mousemove', move);
+  slider.addEventListener('touchmove', move);
 
-	slider.addEventListener('mouseleave', end);
-	slider.addEventListener('mouseup', end);
-	slider.addEventListener('touchend', end);
+  slider.addEventListener('mouseleave', end);
+  slider.addEventListener('mouseup', end);
+  slider.addEventListener('touchend', end);
 })();
 
