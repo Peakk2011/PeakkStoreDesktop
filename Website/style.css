@@ -9,6 +9,8 @@
     -ms-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
 body,
@@ -20,6 +22,7 @@ html {
     -moz-text-size-adjust: none;
     text-size-adjust: none;
     touch-action: manipulation;
+    scroll-behavior: smooth;
 }
 
 #MAINBODYSTYLEOUT {
@@ -36,17 +39,18 @@ html {
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
+    height: 0px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 0px;
-    background-color: var(--color-background);
+    background-color: var(--NavbarColor);
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--SecColor); 
+    background: var(--NavbarColor); 
     border-radius: 0px;
   }
   
@@ -79,7 +83,6 @@ nav {
     backdrop-filter: blur(50px);
     z-index: 1;
     position: fixed;
-    border-bottom: solid 1px var(--borderfont);
 }
 
 .navbar {
@@ -385,7 +388,7 @@ header {
     display: flex;
     position: relative;
     background-color: var(--color-text);
-    height: 80px;
+    height: 65px;
 }
 
 .headernav-con {
@@ -437,7 +440,6 @@ header {
     backdrop-filter: blur(20px);
     height: 400px;
     border-radius: 0px 0px 8px 8px;
-    box-shadow: var(--slidercolor) 0px 0px 22px 2px;
 }
 
 .header-lines-text {
@@ -755,7 +757,6 @@ header {
     height: 400px;
     position: relative;
     border-radius: 8px;
-    box-shadow: var(--slidercolor) 0px 0px 15px 0px;
 }
 
 .signin-content {
@@ -823,7 +824,6 @@ header {
     max-width: 300px;
     width: 300px;
     margin: 0 auto;
-    box-shadow: var(--slidercolor) 0px 40px 45px 20px;
 }
 
 .pro-text h1 {

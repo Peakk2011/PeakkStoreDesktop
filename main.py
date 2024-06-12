@@ -12,4 +12,4 @@ sys.stderr = stream
 def python():
     pass
 
-eel.start('index.html', mode='chrome')
+eel.start('Startup.html', mode='chrome', size=(360, 810))

@@ -1,3 +1,8 @@
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});
+
+
 const ButtonToggle = document.getElementById("myBtn");
 const GetNAVOUTNOW = document.getElementById("TurnNavOFF");
 
@@ -50,7 +55,7 @@ function GetToggleOUST() {
 let myWindow;
 
 function OpenWindow() {
-  myWindow = window.open("index.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=360,height=810");
+  myWindow = window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=360,height=810");
 }
 
 
@@ -112,6 +117,9 @@ function CloseLanguageSetup() {
 function changeCss() {
   var navElement = document.querySelector("nav"); //after >
   this.scrollY > 300 ? navElement.style.top = "0px" : navElement.style.top = "-70px";
+
+  var navElementMenuTabs = document.getElementById("MenuTabs"); //after >
+  this.scrollY > 300 ? navElementMenuTabs.style.top = "57px" : navElementMenuTabs.style.top = "-70px";
 
   var navElement = document.getElementById("SearchBox"); //after >
   this.scrollY > 300 ? navElement.style.top = "58px" : navElement.style.opacity = "0"
@@ -297,6 +305,7 @@ function ClOSESettingsCheck() {
   setTimeout(function () {
     document.getElementById("Navbi").style.bottom = "0px";
   }, 0);
+  MenuSettingsConn.style.bottom = "-100rem"
   ThemeCloseCheck()
 }
 
@@ -464,3 +473,91 @@ const move = (e) => {
   slider.addEventListener('touchend', end);
 })();
 
+// Settings toggle menu
+const TextIntroSe = document.getElementById("TEXTSettingsIntro");
+const MenuSettingsConn = document.getElementById("SettingsMenuToggleList");
+const Tabs = document.getElementById("MenuTabs");
+
+function OpenMenu() {
+  MenuSettingsConn.style.bottom = "0";
+  TextIntroSe.style.opacity = "0";
+}
+
+function OpenTabs() {
+  document.getElementById("CropSetting").style.marginTop = "70rem"
+  setTimeout(function () {
+    document.getElementById("MAINBODYSTYLEOUT").style.display = "block"
+    document.getElementById("MAINBODYSTYLEOUT").style.zIndex = "0"
+    document.getElementById("MAINBODYSTYLEOUT").className = 'SlideAnimationBODYremove';
+    // document.getElementById("CropSetting").style.marginTop = "0rem"
+  }, 100);
+  setTimeout(function () {
+    document.getElementById("Navbi").style.bottom = "0px";
+  }, 0);
+  MenuSettingsConn.style.bottom = "-100rem"
+  ThemeCloseCheck()
+  // Tabs toggle ON
+  Tabs.style.left = "0";
+  document.getElementById("TextMenuTabs").style.left = "0";
+  document.getElementById("MenuTabsLinks").style.display = "none";
+  document.getElementById("CloseMenuTabs").style.display = "block";
+  document.getElementById("OpenTabsCheck").style.display = "none";
+  document.getElementById("CloseMenuBtn").style.display = "block";
+}
+
+function OpenTabsWith() {
+  document.getElementById("GetNavOnNow").style.display = ('none')
+  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)"
+  ButtonToggle.style.display = ("block")
+  document.getElementById("NavbarVeryMainNo").style.top = ('0px')
+  document.getElementById('MainBottomNavbar').style.bottom = ('0px')
+  document.getElementById("Backgro").style.opacity = "1"
+  document.getElementById("Backgro").style.visibility = "hidden"
+  document.getElementById("Backgro").style.width = "0px"
+  // Tabs toggle ON
+  Tabs.style.left = "0";
+  document.getElementById("TextMenuTabs").style.left = "0";
+  document.getElementById("MenuTabsLinks").style.display = "none";
+  document.getElementById("CloseMenuTabs").style.display = "block";
+  document.getElementById("OpenTabsCheck").style.display = "none";
+  document.getElementById("CloseMenuBtn").style.display = "block";
+}
+
+function ExitThis() {
+  Tabs.style.left = "-130rem";
+  // exit sidebar
+  document.getElementById("GetNavOnNow").style.display = ('none')
+  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)"
+  ButtonToggle.style.display = ("block")
+  document.getElementById("NavbarVeryMainNo").style.top = ('0px')
+  document.getElementById('MainBottomNavbar').style.bottom = ('0px')
+  document.getElementById("Backgro").style.opacity = "1"
+  document.getElementById("Backgro").style.visibility = "hidden"
+  document.getElementById("Backgro").style.width = "0px"
+    document.getElementById("MenuTabsLinks").style.display = "block"
+  document.getElementById("CloseMenuTabs").style.display = "none"
+  document.getElementById("CloseMenuBtn").style.display = "none"
+  document.getElementById("OpenTabsCheck").style.display = "block"
+}
+
+function CloseTabsWithSetting() {
+  Tabs.style.left = "-130rem";
+  document.getElementById("CropSetting").style.marginTop = "70rem"
+  setTimeout(function () {
+    document.getElementById("MAINBODYSTYLEOUT").style.display = "block"
+    document.getElementById("MAINBODYSTYLEOUT").style.zIndex = "0"
+    document.getElementById("MAINBODYSTYLEOUT").className = 'SlideAnimationBODYremove';
+    // document.getElementById("CropSetting").style.marginTop = "0rem"
+  }, 100);
+  setTimeout(function () {
+    document.getElementById("Navbi").style.bottom = "0px";
+  }, 0);
+  MenuSettingsConn.style.bottom = "-100rem"
+  ThemeCloseCheck()
+}
+
+function CloseDivWhenClicksIT() {
+  GetToggleOUST()
+  MenuLinksCloseCheck()
+  ThemeCloseCheck()
+}

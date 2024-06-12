@@ -4,40 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeakkStore</title>
+    <title>ㅤ</title>
+    <link rel="stylesheet" href="Font.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body>
+<body onload="load()">
+
+    <div class="text">
+
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <h1>Peakk Store will automaticity open<br>you can close this page now.</h1>
+
+    </div>
 
     <style>
-        button {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            border: solid 1px #eee;
-            padding: 0.6rem 1.5rem;
-            background-color: transparent;
-            color: #fff;
+        :root {
+            color-scheme: light dark;
         }
-        button:active {
-            filter: blur(20px);
-        }
+
         body {
-            background-color: #0c0c0c;
+            background: light-dark(#f8f8f8, #1f2020);
+            overflow: hidden;
+        }
+
+        * {
+            font-family: "DM Sans", sans-serif;
+            user-select: none;
+        }
+
+        ion-icon {
+            font-size: 100px;
+            display: block;
+            margin-bottom: 1.5rem;
+            --ionicon-stroke-width: 24px;
+        }
+
+        h1 {
+            -webkit-text-stroke-width: 0.5px;
+            font-weight: 300;
+            font-size: 17px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .text {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
     </style>
 
-    <button onclick="OpenWindow()">Open Peakk store</button>
+    <script src="../eel.js"></script>
 
     <script>
-        let myWindow;
-
-        function OpenWindow() {
-            myWindow = window.open("index.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=420,height=840");
+        if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+            console.log('🎉 Dark mode is supported');
         }
 
-        n.onclick = OpenWindow()
+        // window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/", "_target", "toolbar=no,scrollbars=no,resizable=no,top=50%,left=50%,width=360,height=810");
+        function load() {
+            window.location.href = "https://peakk2011.github.io/PeakkStoreDesktop/Website/";
+        }
+        // setTimeout(function () {
+
+        // }, 0);
     </script>
 </body>
 

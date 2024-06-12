@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../overlay.css">
     <link rel="stylesheet" href="../query.css">
     <link rel="stylesheet" href="../alert.css">
+    <link rel="stylesheet" href="../SettingsMenu.css">
     <!-- Only thai language -->
     <link rel="stylesheet" href="./Thai.css">
     <!-- Primary Meta Tags -->
@@ -52,8 +53,8 @@
                         </div>
                         <div class="settingsiconslink">
                             <div class="settingslinksiconContent">
-                                <li><a href="#"><ion-icon name="extension-puzzle-sharp"></ion-icon></a></li>
-                                <li><a href="#"><ion-icon name="log-in-sharp"></ion-icon></a></li>
+                                <li><a onclick="OpenMenu()"><ion-icon name="extension-puzzle-sharp"></ion-icon></a></li>
+                                <li><a href="./Login/log.html"><ion-icon name="log-in-sharp"></ion-icon></a></li>
                                 <li><a onclick="OpenThemeSecOnSettings()"><ion-icon
                                             name="color-fill-sharp"></ion-icon></a></li>
                                 <li><a onclick="OpenLANGUAGEsecOnSettings()"><ion-icon
@@ -69,9 +70,20 @@
 
             </div>
             <!-- Settings content settings menu -->
-            <div class="settingsMenuTxt">
+            <div class="settingsMenuTxt" id="TEXTSettingsIntro">
                 <p>ไม่มีอะไรเกิดขื่น<br>ถ้าคุณไม้ได้ทําอะไร<br>ในเมนูด้านซ้าย</p>
             </div>
+            <!-- function overlay -->
+            <div class="Menutoggle" id="SettingsMenuToggleList">
+                <div class="MenuTogCon">
+                    <div class="MenuTogText">
+                        <p>เมนูเพิ่มเติม</p>
+                        <button onclick="OpenTabs()" id="OpenTabsCheck">เปิดเมนูเพิ่มเติม</button>
+                        <button onclick="CloseTabsWithSetting()" id="CloseMenuBtn">ปิดเมนูเพิ่มเติม</button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 
@@ -161,17 +173,37 @@
             </div>
         </nav>
 
+        <!-- MenuToglges -->
+
+        <div class="menuness" id="MenuTabs">
+            <div class="MenuNavbarMain" id="TextMenuTabs">
+                <div class="MenuNavTxt">
+                    <div class="MenuNavTxtLinks">
+                        <ion-icon name="grid-outline"></ion-icon>
+                        <div id="Nenulnk">
+                            <li><a onclick="ThemeSetupCheck()">ธีม</a></li>
+                            <li><a href="#">ตัวเลือก</a></li>
+                            <li><a href="#">แท็ก</a></li>
+                            <li><a href="#">เกียวกับ</a></li>
+                            <li><a href="#">ติดตั้ง</a></li>
+                            <li><a onclick="ExitThis()">ปิดเมนู</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="sidebar" id="MainNavSideOFF">
             <div class="toggle" id="GetNavOnNow">
                 <h1><ion-icon name="bag-handle-sharp"></ion-icon>ร้านค้าของพีค</h1>
-                <li id="TurnNavOFF" style="cursor: pointer;"><a><ion-icon
-                            name="exit-outline"></ion-icon>ออกจากหน้านี้</a></li>
+                <li id="TurnNavOFF" style="cursor: pointer;"><a><ion-icon name="exit-outline"></ion-icon>ออกจากหน้านี้</a></li>
                 <li><a href="#"><ion-icon name="add-outline"></ion-icon>Website</a></li>
                 <li><a href="#"><ion-icon name="add-outline"></ion-icon>Website</a></li>
                 <li><a href="#"><ion-icon name="add-outline"></ion-icon>Website</a></li>
                 <li><a href="#"><ion-icon name="add-outline"></ion-icon>Website</a></li>
                 <li><a href="#"><ion-icon name="add-outline"></ion-icon>Website</a></li>
-                <li><a onclick="logout()"><ion-icon name="add-outline"></ion-icon>Logout</a></li>
+                <li id="MenuTabsLinks"><a onclick="OpenTabsWith()"><ion-icon name="add-outline"></ion-icon>เปิดเมนูเพิ่มเติม</a></li>
+                <li id="CloseMenuTabs"><a onclick="ExitThis()"><ion-icon name="add-outline"></ion-icon>ปิดเมนูเพิ่มเติม</a></li>
             </div>
         </div>
 
@@ -186,7 +218,7 @@
             </div>
         </div>
 
-        <div class="BackgroundBlur" id="Backgro"></div>
+        <div class="BackgroundBlur" id="Backgro" onclick="CloseDivWhenClicksIT()"></div>
 
         <div class="htmlFontSelect" id="HTMLfontSelecter">
             <div class="FontSelecter">
@@ -489,6 +521,7 @@
 
         <script src="../index.js"></script>
         <script src="@config.js"></script>
+        <script src="../../eel.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
 </body>
 
