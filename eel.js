@@ -3,7 +3,7 @@ document.addEventListener("contextmenu", function (e){
 }, false);
 
 window.onresize = function () {
-    if (window.outerWidth < 1200 || window.outerHeight < 800) {
+    if (window.outerWidth < 3840 || window.outerHeight < 2160) {
         window.resizeTo(360, 810);
     }
 }

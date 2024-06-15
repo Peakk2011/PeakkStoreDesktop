@@ -477,10 +477,14 @@ const move = (e) => {
 const TextIntroSe = document.getElementById("TEXTSettingsIntro");
 const MenuSettingsConn = document.getElementById("SettingsMenuToggleList");
 const Tabs = document.getElementById("MenuTabs");
+const ExitBtn = document.getElementById("ExitFunctionSettings");
 
 function OpenMenu() {
   MenuSettingsConn.style.bottom = "0";
   TextIntroSe.style.opacity = "0";
+  MenuSettingsConn.style.bottom = "0px";
+  MenuSettingsConn.style.opacity = "1";
+  ExitBtn.style.opacity = "1";
 }
 
 function OpenTabs() {
@@ -538,6 +542,7 @@ function ExitThis() {
   document.getElementById("CloseMenuTabs").style.display = "none"
   document.getElementById("CloseMenuBtn").style.display = "none"
   document.getElementById("OpenTabsCheck").style.display = "block"
+  ExitBtn.style.opacity = "0";
 }
 
 function CloseTabsWithSetting() {
@@ -554,10 +559,18 @@ function CloseTabsWithSetting() {
   }, 0);
   MenuSettingsConn.style.bottom = "-100rem"
   ThemeCloseCheck()
+  ExitBtn.style.opacity = "0";
 }
 
 function CloseDivWhenClicksIT() {
   GetToggleOUST()
   MenuLinksCloseCheck()
   ThemeCloseCheck()
+}
+
+function ExtANYfucnctionSettings() {
+  TextIntroSe.style.opacity = "1";
+  MenuSettingsConn.style.bottom = "-50px";
+  MenuSettingsConn.style.opacity = "0";
+  ExitBtn.style.opacity = "0";
 }

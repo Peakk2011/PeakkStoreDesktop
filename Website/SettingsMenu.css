@@ -60,12 +60,12 @@
     align-items: center;
     height: 45px;
     max-width: 300px;
+    margin: 0 auto;
 }
 
 .MenuNavTxt ion-icon {
     color: var(--SecColor);
-    font-size: 22px;
-    transform: translateX(21px);
+    font-size: 24px;
 }
 
 .MenuNavTxtLinks {
@@ -84,7 +84,7 @@
 }
 
 #Nenulnk {
-    margin-left: 2.4rem;
+    margin-left: 0.8rem;
     display: flex;
     align-items: center;
 }
@@ -98,3 +98,7 @@
 }
 
 /* OpenTabsCheck default is block display */
+
+#ExitFunctionSettings {
+    opacity: 0;
+}
