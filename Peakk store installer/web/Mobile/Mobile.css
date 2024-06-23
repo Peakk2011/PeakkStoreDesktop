@@ -1,0 +1,21 @@
+.langText h1 {
+    margin-bottom: 0.2rem;
+}
+
+.langText hr {
+    width: 50%;
+    margin: 0 auto;
+    border: solid 1px #fffbd1;
+}
+
+.langText p {
+    color: #eee;
+    margin: 1rem 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.langbtn li a {
+    width: 90%;
+}

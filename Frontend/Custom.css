@@ -12,6 +12,8 @@
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s all;
     user-select: none;
     scroll-behavior: smooth;
+    cursor: none;
+    /* display: none; */
 }
 
 body {
@@ -78,8 +80,9 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgba(31, 32, 32, 0.467); */
-    background-color: #1f2020;
+    /* background-color: rgba(31, 32, 32, 0.536); */
+    /* backdrop-filter: blur(15px); */
+    background-color: #050505;
     height: 60px;
     border-bottom: solid 1px #333;
     position: fixed;
@@ -97,7 +100,7 @@ span {
     color: #fff;
     font-size: 22px;
 }
-
+ 
 .navbarIcon {
     display: flex;
     align-items: center;
@@ -141,7 +144,8 @@ span {
 .sideCon {
     width: 240px;
     height: 100vh;
-    background-color: #1f2020;
+    background-color: rgba(15, 15, 15, 0.596); 
+    backdrop-filter: blur(20px);
     border-right: solid 1px #333;
 }
 
@@ -162,6 +166,8 @@ span {
     display: block;
     font-size: 16px;
     transform: translateY(-3px);
+    font-weight: 300;
+    -webkit-text-stroke-width: 0.3px;
 }
 
 .sideLinks li a ion-icon {
@@ -195,7 +201,7 @@ span {
 .sidetexttitle {
     display: flex;
     align-items: center;
-    padding-top: 0.3rem;
+    padding-top: 1.3rem;
 }
 
 .sidetexttitle p {
@@ -304,7 +310,7 @@ input[type="text"] {
 
 .introductext strong {
     font-weight: 600;
-    font-size: 45px;
+    font-size: 35px;
     color: #000;
     font-family: Segoe Ui Variable;
     margin-top: 1.5rem;
@@ -317,11 +323,11 @@ input[type="text"] {
 }
 
 .introductext ion-icon {
-    transform: translateY(8px);
+    transform: translateY(0px);
     margin-right: 0.6rem;
-    font-size: 140px;
+    font-size: 185px;
     color: #fffde6;
-    --ionicon-stroke-width: 12px;
+    --ionicon-stroke-width: 8px;
 }
 
 .IntroBGdiv {
@@ -346,17 +352,25 @@ input[type="text"] {
 }
 
 .outlineIntrocon h2 {
-    color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #fffde6;
-    font-size: 145px;
-    font-family: 'Cabin Condensed';
-    /* font-family: SEGOE UI VARIABLE; */
-    /* line-height: 1.1; */
+    color: #fff;
+    font-size: 85px;
+    font-weight: 300;
+    font-family: SEGOE UI VARIABLE;
+    /* font-family: "Silkscreen", sans-serif; */
+    font-weight: 400;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    margin-top: 1.5rem;
 }
+
+.outlineIntrocon img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    transform: translateY(3px);
+}
+
 
 @keyframes HeadFadeMA {
     0% {
@@ -407,6 +421,7 @@ main {
     transform: translate(-50%,-6px);
 }
 
+
 .SimbolText p {
     color: #fffde6;
     text-align: center;
@@ -441,7 +456,7 @@ main {
     background: linear-gradient(90deg, #0f0f0f, #fff, #0f0f0f);
     background-repeat: no-repeat;
     background-size: 80%;
-    animation: animateTextreveal 10s linear infinite;
+    animation: animateTextreveal 5s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
     width: 100%;
@@ -454,6 +469,7 @@ main {
 @keyframes animateTextreveal {
     0% {
       background-position: -500%;
+      filter: blur(2px);
     }
     100% {
       background-position: 500%;

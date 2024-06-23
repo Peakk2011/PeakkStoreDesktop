@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peakk installer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./Peakk-Logo/Mask group.png">
+</head>
+
+<body>
+
+    <nav id="ThisNavbar">
+        <div class="navbarlinks">
+            <img src="./Peakk-Logo/Mask group.png" alt="" onclick="myFunction()">
+            <!-- <p onclick="myFunction()">Peakk Store Installer</p> -->
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Peakk Store Installer</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a href="">Open Peakk store</a>
+                    <a href="">Open store on mobile site</a>
+                    <a href="">Open Peakk portfolio</a>
+                    <a href="">Open Portfolio installer</a>
+                    <a href="">About this installer</a>
+                    <a href="">About Peakk store</a>
+                    <a href="">About Peakk portfolio</a>
+                    <a onclick="GETmainpageToggleOn()">Open Peakk installer</a>
+                    </div>
+                </div>
+            <button onclick="GETmainpageToggleOn()">Open Peakk store installer</button>
+            <button onclick="CloseWindow()">Close Peakk store installer</button>
+        </div>
+    </nav>
+
+    <div class="intro" id="PeakkStoreintro">
+        <div class="introHeader">
+            <div class="introText">
+                <img src="./Peakk-Logo/Mask group.png" alt="">
+                <h1>Peakk store</h1>
+                <hr>
+            </div>
+            <div class="introbtn">
+                <button onclick="GETmainpageToggleOn()">Install Peakk Store</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Open.js"></script>
+</body>
+
+</html>

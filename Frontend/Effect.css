@@ -6,6 +6,7 @@
     height: 100%;
     overflow: hidden;
     background-attachment: fixed;
+    /* z-index: -1; */
 }
 
 .circles li{
@@ -14,10 +15,11 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
+    background: rgba(255, 255, 255, 0.223);
+    animation: animate 8s linear infinite;
     bottom: -150px;
-    
+    backdrop-filter: blur(20px);
+    z-index: -1;
 }
 
 .circles li:nth-child(1){
@@ -113,3 +115,25 @@
     }
 
 }
+
+.cursor {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 100;
+  }
+  .cursor--large {
+    --size: 40px;
+    border: 3px solid #fffde6;
+    mix-blend-mode: difference;
+  }
+  .cursor--small {
+    --size: 20px;
+    background: #fffde6;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+  }
