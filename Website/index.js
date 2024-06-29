@@ -1,7 +1,17 @@
+// kickOut desktop user to Peakk store desktop
+
+window.addEventListener("resize", function() {
+  if (window.matchMedia("(min-width: 425px)").matches) {
+    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
+    // window.open("../Frontend/index.html","_parent");
+  } else {
+    console.log("Screen less than 500px")
+  }
+})
+
 document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
 });
-
 
 const ButtonToggle = document.getElementById("myBtn");
 const GetNAVOUTNOW = document.getElementById("TurnNavOFF");

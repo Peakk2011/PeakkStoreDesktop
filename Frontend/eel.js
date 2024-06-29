@@ -1,19 +1,18 @@
 window.onresize = function () {
-    if (window.outerWidth < 1200 || window.outerHeight < 800) {
-        window.resizeTo(1200, 800);
+    if (window.outerWidth < 1600 || window.outerHeight < 900) {
+        window.resizeTo(1600, 1900);
     }
 }
 
-window.addEventListener("resize", function () {
-    window.resizeTo({ xValue }, { yValue });
-});
+window.addEventListener("resize", function() {
+  if (window.matchMedia("(min-width: 425px)").matches) {
+    // window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
+  } else {
+    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
+  }
+})
 
 var size = [window.width, window.height];  //public variable
-
-document.getElementById("my_element").addEventListener("wheel", (event) => {
-    if (event.ctrlKey)
-        event.preventDefault();
-});
 
 let dims = [];
 function getDims ()
