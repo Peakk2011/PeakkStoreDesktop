@@ -1,5 +1,5 @@
 window.onresize = function () {
-    if (window.outerWidth < 1600 || window.outerHeight < 900) {
+    if (window.outerWidth < 800 || window.outerHeight < 600) {
         window.resizeTo(1600, 900);
     }
 }
