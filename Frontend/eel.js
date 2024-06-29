@@ -1,12 +1,12 @@
 window.onresize = function () {
     if (window.outerWidth < 1600 || window.outerHeight < 900) {
-        window.resizeTo(1600, 1900);
+        window.resizeTo(1600, 600);
     }
 }
 
 window.addEventListener("resize", function() {
-  if (window.matchMedia("(min-width: 425px)").matches) {
-    // window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
+  if (window.matchMedia("(min-width: 1280px)").matches) {
+    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
   } else {
     window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
   }

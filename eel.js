@@ -8,16 +8,7 @@ window.onresize = function () {
     }
 }
 
-window.addEventListener("resize", function () {
-    window.resizeTo({ xValue }, { yValue });
-});
-
 var size = [window.width, window.height];  //public variable
-
-document.getElementById("my_element").addEventListener("wheel", (event) => {
-    if (event.ctrlKey)
-        event.preventDefault();
-});
 
 let dims = [];
 function getDims ()
