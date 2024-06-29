@@ -4,13 +4,13 @@ window.onresize = function () {
     }
 }
 
-// window.addEventListener("resize", function() {
-//   if (window.matchMedia("(min-width: 1280px)").matches) {
+window.addEventListener("resize", function() {
+  if (window.matchMedia("(min-width: 1280px)").matches) {
 
-//   } else {
-//     window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
-//   }
-// })
+  } else {
+    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
+  }
+})
 
 var size = [window.width, window.height];  //public variable
 
