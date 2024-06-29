@@ -6,7 +6,7 @@ window.onresize = function () {
 
 window.addEventListener("resize", function() {
   if (window.matchMedia("(min-width: 1280px)").matches) {
-    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
+    
   } else {
     window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
   }
