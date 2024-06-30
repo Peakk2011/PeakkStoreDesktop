@@ -2,11 +2,11 @@ document.addEventListener("contextmenu", function (e){
   e.preventDefault();
 }, false);
 
-window.onresize = function () {
-    if (window.outerWidth < 3840 || window.outerHeight < 2160) {
-        window.resizeTo(360, 810);
-    }
-}
+// window.onresize = function () {
+//     if (window.outerWidth < 3840 || window.outerHeight < 2160) {
+//         window.resizeTo(360, 810);
+//     }
+// }
 
 var size = [window.width, window.height];  //public variable
 
