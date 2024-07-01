@@ -1,153 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peakk store</title>
+    <title>Peakk - Peakk store desktop</title>
+    <link rel="stylesheet" href="./Slider Interface/Sidebar.css">
     <link rel="stylesheet" href="Custom.css">
-    <link rel="stylesheet" href="Variable.css">
     <link rel="stylesheet" href="Font.css">
-    <link rel="stylesheet" href="Effect.css">
-    <link rel="stylesheet" href="Window.css">
+    <link rel="stylesheet" href="Navbar.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="./Image/Peakk-Logo/Mask group.png">
-    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
-    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
-
 <body>
+    
+    <div class="sidebar">
+        <div class="sidebarcon" id="Sidebar">
+          <div class="sidebartext">
+            <span style="cursor:pointer" onclick="CloseNav()">&#9776;</span>
+            <img src="./Image/PeakkSolid.png" alt="">
+            <h1>Peakk Store</h1>
+          </div>
+          <div class="sidebarlink">
+            <div class="iconslink">
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                <li><a href="#">Developer Tools</a></li>
+            </div>
+            <div class="iconslink">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <li><a href="#">Login & Register</a></li>
+            </div>
+            <div class="iconslink">
+                <ion-icon name="crop-outline"></ion-icon>
+                <li><a href="#">Open phone view</a></li>
+            </div>
+            <div class="iconslink">
+                <ion-icon name="language-outline"></ion-icon>
+                <li><a href="#">Language</a></li>
+            </div>
+            <div class="iconslink">
+                <ion-icon name="color-fill-outline"></ion-icon>
+                <li><a href="#">Themes</a></li>
+            </div>
+            <div class="iconslink">
+                <ion-icon name="help-outline"></ion-icon>
+                <li><a href="#">Help</a></li>
+            </div>
+            <div class="iconslink">
+                <ion-icon name="paper-plane-outline"></ion-icon>
+                <li><a href="#">Feedback</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="dragholder"></div>
+      </div>
 
-    <div class="cursor cursor--large"></div>
-    <div class="cursor cursor--small"></div>
+      <div class="BgSidebar"></div>
 
-    <nav>
+      <nav>
         <div class="navbar">
+            <div class="navbartext">
+                <img src="./Image/PeakkSolid.png" alt="">
+                <h1>Store</h1>
+            </div>
             <div class="navbarlink">
-                <span onclick="CloseSidebar()">☰</span>
-                <div class="NavLinkss">
-                    <li><a onclick="ReturnSidebar()" id="HighLightClickHome">Home</a></li>
-                    <li><a onclick="ThemeSetupCheck()">Themes</a></li>
-                    <li><a href="#">Language</a></li>
-                    <li><a href="#">Settings</a></li>
-                </div>
-            </div>
-            <!-- Search -->
-            <div class="search-container" id="Search">
-                <form action="">
-                    <div class="searchicon">
-                        <ion-icon name="search"></ion-icon>
-                    </div>
-                    <input type="text" placeholder="Type here to search everything that you like." name="search">
-                </form>
-            </div>
-            <!-- End Search -->
-            <div class="navbarIcon">
-                <div class="searchBtnIco">
-                    <ion-icon name="search" onclick="CloseSearch()" id="CloseSearch"></ion-icon>
-                    <ion-icon name="search" onclick="ToggleSearch()" id="OpenSearch"></ion-icon>
-                </div>
-                <ion-icon name="download-outline"></ion-icon>
-                <li><a href="#">Create Account</a></li>
+                <li><a href="#" id="Text">Learn more</a></li>
+                <li><a href="#" id="TextColor">Create Account</a></li>
+                <span style="cursor:pointer" onclick="SidebarToggle()">&#9776;</span>
             </div>
         </div>
     </nav>
 
-    
+    <div class="pattern"></div>
 
-    <div class="sidebar" id="SideBar">
-        <div class="sideCon">
-            <div class="sideText">
-                <div class="sidetexttitle" onclick="CloseSidebar()">
-                    <ion-icon name="arrow-back"></ion-icon>
-                    <p>Home</p>
-                </div>
-                <div class="sideLinks">
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Font & Typeface</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Javascript & Featured</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Basic tools</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Motion background</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>CSS Tools</a></li>
-                    <br>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Peakk Product</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Theme & Color</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Website Template</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Peakk Store Product</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Codepen work</a></li>
-                    <li><a href="#"><ion-icon name="add"></ion-icon>Try Search here</a></li>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="IntroBGdiv">
-        <div class="introductext">
-            <ion-icon name="bag-handle-sharp"></ion-icon>
-            <div class="outlineIntrocon">
-                <h2><img src="./Image/Peakk-Logo/Mask group.png" alt="">STORE</h2>
-            </div>
-            <div class="flexintroheadtext">
-                <strong>Created from Peakk.</strong>
-            </div>
-            <div class="SimbolBottm" onclick="OpenBottomNavbarClickCheck()" id="Navbi">
-                <div class="SimbolText">
-                    <p>Scroll more to see content on Peakk store</p>
-                    <hr id="ClickToggleSim">
-                </div>
-            </div>
-        </div>
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-    </ul>
-    </div>
-
-    <main>
-        <div class="mainContent">
-            <p id="ShiningTxt">"Peakk store that making for developer tool and Peakk store is free to use.</p>
-        </div>
-        <div class="imagemaincon">
-            <img src="./PageText/PageText (1).png" alt="" id="IMM1">
-            <img src="./PageText/PageText (2).png" alt="" id="IMM2">
-            <img src="./PageText/PageText (4).png" alt="" id="IMM3">
-            <img src="./PageText/PageText (5).png" alt="" id="IMM4">
-            <img src="./PageText/PageText (6).png" alt="" id="IMM5">
-        </div>
-    </main>
-
-    <!-- Theme toggle -->
-
-    <!-- <div class="theme-switcher">
-        <button data-theme="green" aria-pressed="true">Green</button>
-        <button data-theme="blue" aria-pressed="false">Blue</button>
-        <button data-theme="pink" aria-pressed="false">Bone</button>
-        <button data-theme="orange" aria-pressed="false">Default</button>
-      </div> -->
-
-      <!-- SETTINGS -->
-
-
-
-    <script type="text/javascript" src="eel.js"></script>
-    <script src="Files.js"></script>
-
+      <script src="./Slider Interface/interface.js"></script> 
 </body>
-
 </html>
