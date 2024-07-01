@@ -5,7 +5,7 @@ window.addEventListener("resize", function() {
     window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
     // window.open("../Frontend/index.html","_parent");
   } else {
-    console.log("Screen less than 500px")
+    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
   }
 })
 
