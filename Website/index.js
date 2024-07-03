@@ -1,14 +1,3 @@
-// kickOut desktop user to Peakk store desktop
-
-window.addEventListener("resize", function() {
-  if (window.matchMedia("(min-width: 500px)").matches) {
-    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
-    // window.open("../Frontend/index.html","_parent");
-  } else {
-    window.open("https://peakk2011.github.io/PeakkStoreDesktop/Frontend/","_parent");
-  }
-})
-
 document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
 });
