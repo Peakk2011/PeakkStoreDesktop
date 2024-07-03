@@ -1,3 +1,11 @@
+window.onresize = function () {
+  if (window.outerWidth < 445 || window.outerHeight < 800) {
+      window.resizeTo(345, 800);
+  } else if (window.outerWidth < 4000 || window.outerHeight < 4000) {
+      window.resizeTo(345, 800);
+  }
+}
+
 document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
 });
