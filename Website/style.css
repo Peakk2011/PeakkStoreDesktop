@@ -199,7 +199,6 @@ button:active {
 .buttomNavContent {
     display: flex;
     margin: 0 auto;
-    width: 280px;
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
@@ -210,8 +209,12 @@ button:active {
 .buttomNavContent li a {
     color: var(--SecColor);
     font-size: 26px;
-    transform: translateY(3px);
-    display: inline-block;
+    display: flex;
+    width: 57px;
+    height: 58px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /* language */
@@ -225,7 +228,7 @@ button:active {
     bottom: -160px;
     opacity: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .lang {
@@ -1164,7 +1167,7 @@ a:active {
     padding: 0.8rem 1rem;
     border-radius: 5px;
     border: solid 1px var(--borderfont);
-    box-shadow: 5px 5px 2px 1px;
+    box-shadow: 5px 5px 0px -1px;
 }
 
 #LAST {

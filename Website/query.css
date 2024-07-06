@@ -1,10 +1,49 @@
 @media only screen and (min-width: 365px) {
+    .headernav-con {
+        width: 320px;
+    }
+    .header-text {
+        width: 320px;
+    }
     .header-content {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 0px 0px 4px 4px;
+    }
+    .headernav {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:  3%;
+        border-radius: 4px 4px 0px 0px;
+    }
+    .cropcolorSlider {
+        box-shadow: none;
         width: 340px;
+        border-radius: 4px 0px 0px 4px;
+        margin-left: auto;
+    }
+    .signin-content {
+        width: 320px;
+    }
+    .SignIn {
+        width: 95%;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+    .PeakkPro {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .header-content {
+        width: 350px;
         margin: 0 auto;
     }
     .headernav {
-        width: 340px;
+        width: 350px;
         margin: 0 auto;
         border-radius: 4px 4px 0px 0px;
     }
@@ -29,12 +68,12 @@
         transform: translateX(-20px);
     }
     .SignIn {
-        width: 340px;
+        width: 350px;
         margin: 0 auto;
         box-shadow: none;
     }
     .PeakkPro {
-        width: 340px;
+        width: 350px;
         margin: 0 auto;
     }
     .product {

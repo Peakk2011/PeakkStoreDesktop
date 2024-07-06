@@ -1,8 +1,10 @@
+// Peakk copylight form Peakk store index.js javascript code update 3/7/24
+
 window.onresize = function () {
   if (window.outerWidth < 445 || window.outerHeight < 800) {
-      window.resizeTo(345, 800);
+      window.resizeTo(360, 810);
   } else if (window.outerWidth < 4000 || window.outerHeight < 4000) {
-      window.resizeTo(345, 800);
+      window.resizeTo(360, 810);
   }
 }
 
@@ -12,6 +14,7 @@ document.addEventListener('contextmenu', function(event) {
 
 const ButtonToggle = document.getElementById("myBtn");
 const GetNAVOUTNOW = document.getElementById("TurnNavOFF");
+const SidebarDragable = document.getElementById("SidebarDragable");
 
 ButtonToggle.addEventListener("click", GetToggleON)
 GetNAVOUTNOW.addEventListener("click", GetToggleOUST)
@@ -50,6 +53,38 @@ function GetToggleOUST() {
   document.getElementById("Backgro").style.visibility = "hidden"
   document.getElementById("Backgro").style.width = "0px"
 }
+
+// background slider 
+
+document.getElementById("Backgro").addEventListener("touchmove",() => {
+  document.getElementById("Backgro").style.opacity = "1";
+  document.getElementById("Backgro").style.visibility = "hidden";
+  document.getElementById("Backgro").style.width = "0px";
+  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)";
+  // Nav and bottom sidenav
+  ButtonToggle.style.display = ("block")
+  document.getElementById("NavbarVeryMainNo").style.top = ('0px');
+  document.getElementById('MainBottomNavbar').style.bottom = ('0px');
+  CloseSearch();
+  CloseLanguageSetup();
+  ThemeCloseCheck();
+  MenuLinksCloseCheck();
+}) 
+
+document.getElementById("MainNavSideOFF").addEventListener("touchmove",() => {
+  document.getElementById("Backgro").style.opacity = "1";
+  document.getElementById("Backgro").style.visibility = "hidden";
+  document.getElementById("Backgro").style.width = "0px";
+  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)";
+  // Nav and bottom sidenav
+  ButtonToggle.style.display = ("block")
+  document.getElementById("NavbarVeryMainNo").style.top = ('0px');
+  document.getElementById('MainBottomNavbar').style.bottom = ('0px');
+  CloseSearch();
+  CloseLanguageSetup();
+  ThemeCloseCheck();
+  MenuLinksCloseCheck();
+}) 
 
 // const myTimeout = setTimeout(myGreeting, 500);
 
@@ -433,12 +468,26 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 }
 
-function OpenBottomNavbarClickCheck() {
-  setTimeout(function () {
-    document.getElementById("MainBottomNavbar").style.bottom = "30px"
-  }, 250);
-  document.getElementById("MainBottomNavbar").style.bottom = "-60px";
-}
+document.getElementById("Navbi").addEventListener('touchmove',() => {
+  document.getElementById("MainBottomNavbar").style.bottom = "0px"
+  // document.getElementById("MainBottomNavbar").style.bottom = "-60px";
+})
+
+document.getElementById("Navbi").addEventListener('touchstart',() => {
+  document.body.style.overflow = "hidden";
+})
+
+document.getElementById("Navbi").addEventListener('touchend',() => {
+  setTimeout(function() {
+    document.body.style.overflow = "auto";
+    document.body.style.overflowX = "hidden";
+  }, 100);
+})
+
+SidebarDragable.addEventListener("touchmove",() => {
+  // MainNavSideOFF
+  GetToggleON()
+})
 
 // slider
 
