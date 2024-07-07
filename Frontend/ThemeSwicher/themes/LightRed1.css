@@ -1,0 +1,21 @@
+:root {
+    --back-color: #faeae1;
+    --primary-color: #000000;
+    --header-back: #ffe3d3;
+    --header-text: #000 ;
+    /* ffd5bd faeae1 */
+  }
+  
+  body {
+    background-color: var(--back-color);
+    color: var(--primary-color);
+  }
+  
+  header {
+    background-color: var(--header-back);
+    color: var(--header-text);
+  }
+  
+  .box img {
+    border: 2px solid var(--primary-color);
+  }

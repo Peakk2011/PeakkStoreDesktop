@@ -1,12 +1,3 @@
-window.addEventListener("resize", function() {
-  if (window.matchMedia("(min-width: 450px)").matches) {
-    window.open("../Website/index.html","_parent");
-    // window.open("../Frontend/index.html","_parent");
-  } else {
-    console.log("Open Peakk store desktop")
-  }
-})
-
 let sidebar = document.querySelector(".sidebar");
 // let content = document.querySelector(".content");
 let dragholder = document.querySelector(".dragholder");

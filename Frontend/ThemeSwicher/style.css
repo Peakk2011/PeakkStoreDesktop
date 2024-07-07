@@ -1,0 +1,90 @@
+:root {
+  --light: #ffffe9;
+  --sky: #11120e;
+  --purple: #f5f0de;
+  --dark: #C0D6BD;
+  --Natural: #f7fff6;
+  --Onset: #07161b;
+  --Cream: #ffd5bd;
+  --Solid: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+  font-family: 'segoe ui', sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  font-size: 26px;
+  padding: 50px 0;
+  border-bottom: solid 1px var(--primary-color);
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.theme-switches {
+  display: flex;
+  justify-content: center;
+}
+
+.switch {
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.switch:hover {
+  transform: scale(1.3);
+  transition: 0.3s ease-in-out;
+}
+
+.switch:active {
+  transform: scale(1);
+}
+
+#switch-1 {
+  background-color: var(--light);
+}
+
+#switch-2 {
+  background-color: var(--sky);
+}
+
+#switch-3 {
+  background-color: var(--purple);
+}
+
+#switch-4 {
+  background-color: var(--dark);
+}
+
+#switch-5 {
+  background-color: var(--Natural);
+}
+
+#switch-6 {
+  background-color: var(--Cream);
+}
+
+#switch-7 {
+  background-color: var(--Onset);
+}
+
+#switch-8 {
+  background-color: var(--Solid);
+}

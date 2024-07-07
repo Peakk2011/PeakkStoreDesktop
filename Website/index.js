@@ -630,3 +630,9 @@ function ExtANYfucnctionSettings() {
   MenuSettingsConn.style.opacity = "0";
   ExitBtn.style.opacity = "0";
 }
+
+// Navbar swipe to open search
+
+document.getElementById("NavbarVeryMainNo").addEventListener("touchmove",() => {
+  GetSearchOn()
+});

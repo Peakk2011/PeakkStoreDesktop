@@ -7,41 +7,9 @@ window.onresize = function () {
 }
 
 // window.addEventListener("resize", function() {
-//   if (window.matchMedia("(min-width: 1280px)").matches) {
-
-//   } else {
-//     window.open("https://peakk2011.github.io/PeakkStoreDesktop/Website/","_parent");
-//   }
+//     if (window.matchMedia("(min-width: 450px)").matches) {
+//       window.open("../Website/index.html","_parent");
+//     } else {
+//       console.log("Open Peakk store desktop")
+//     }
 // })
-
-var size = [window.width, window.height];  //public variable
-
-let dims = [];
-function getDims ()
-{
-  return [
-    window.visualViewport?.width ||
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth,
-    window.visualViewport?.height ||
-      window.innerHeight ||
-      document.documentElement.clientHeight ||
-      document.body.clientHeight
-  ];
-}
-
-function fixViewport (e)
-{
-  const newdims = getDims();
-  if (newdims[0] != dims[0])
-  {
-    dims = newdims;
-    main.height = dims[1];
-    main.style.height = dims[1] + "px";
-  }
-}
-            
-window.addEventListener("resize", fixViewport);
-            
-fixViewport();
