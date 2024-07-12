@@ -1,0 +1,38 @@
+/* This is default theme chenges only main page style.css */
+
+:root {
+  --back-color: #111111;
+  --primary-color: #222;
+  --header-back: #101010;
+  --header-text: #ffffe9;
+}
+
+body {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+.sidebar {
+  background-color: #0e0e0e;
+  border-right: 1px solid #222;
+}
+
+.sidebarlink .iconslink:hover {
+  background-color: #222;
+}
+
+.iconslink a {
+  color: #ccc;
+}
+
+.iconslink ion-icon {
+  color: #ccc;
+}
+
+.sidebartext h1 {
+  color: #ffffe9;
+}
+
+.BgSidebar {
+  background-color: rgba(5, 5, 5, 0.463);
+}  

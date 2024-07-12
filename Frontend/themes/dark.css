@@ -1,0 +1,96 @@
+:root {
+  --back-color: #141818;
+  --primary-color: #5c5c5c;
+  --header-back: #0f1313;
+  --header-text: #C0D6BD;
+}
+
+body {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+nav {
+  background-color: rgb(15, 19, 19);
+  backdrop-filter: blur(20px);
+  border-bottom: solid 1px var(--primary-color);
+}
+
+#TextColor {
+  background-color: var(--header-text);
+  border: var(--header-text) 1px solid;
+}
+
+#Text {
+  border: var(--header-text) 1px solid;
+  color: var(--header-text);
+}
+
+.navbarlink span {
+  color: var(--header-text);
+}
+
+.NavMore {
+  background-color: var(--header-back);
+  border-bottom: solid 1px var(--primary-color);
+}
+
+.flexnavbartools h2 {
+  color: var(--header-text);
+}
+
+.flexnavbartools hr {
+  border: solid 1px var(--header-text);
+}
+
+.flexnavbartools ion-icon {
+  color: var(--header-text);
+}
+
+.flexnavbartools li a {
+  color: #ccc;
+} 
+
+.flexnavbartools li a:hover {
+  color: var(--header-text);
+  border-bottom: solid 1px var(--header-text);
+}
+
+.navbartext h1 {
+  color: var(--header-text);
+}
+
+.pattern {
+  opacity: 10%;
+  filter: brightness(30%);
+}
+
+.sidebar {
+  background-color: #131717;
+  border-right: 1px solid #424341;
+}
+
+.sidebarlink .iconslink:hover {
+  background-color: #262e2e;
+}
+
+.iconslink a {
+  color: #839080;
+}
+
+.iconslink ion-icon {
+  color: #839080;
+}
+
+.sidebartext h1 {
+  color: #c0d6bd;
+}
+
+.sidebartext span {
+  color: #c0d6bd;
+}
+
+.BgSidebar {
+  background-color: rgba(19, 23, 23, 0.502);
+  backdrop-filter: blur(5px);
+}  

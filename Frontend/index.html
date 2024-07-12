@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="Custom.css">
     <link rel="stylesheet" href="Font.css">
     <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="./ThemeSwicher/Themes.css">
+    <link rel="stylesheet" id="switcher-id" href="">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -60,12 +62,28 @@
         <div class="navbar">
             <div class="navbartext">
                 <img src="./Image/PeakkSolid.png" alt="">
-                <h1>Store</h1>
+                <h1 id="TextNavbar">Peakk Store</h1>
+            </div>
+            <!-- theme selecter -->
+            <div class="ThemeSelc" id="ThemeSelc">
+                <div class="theme-switches">
+                    <div data-theme="light" class="switch" id="switch-1">
+                    </div>
+                    <div data-theme="sky" class="switch" id="switch-2"></div>
+                    <div data-theme="purple" class="switch" id="switch-3"></div>
+                    <div data-theme="dark" class="switch" id="switch-4"></div>
+                    <!-- option -->
+                    <div data-theme="Natural" class="switch" id="switch-5"></div>
+                    <div data-theme="RedCream" class="switch" id="switch-6"></div>
+                    <div data-theme="onset" class="switch" id="switch-7"></div>
+                    <div data-theme="solid" class="switch" id="switch-8"></div>
+                </div>
             </div>
             <div class="navbarlink">
                 <li><a href="javascript:void(0)" id="Text">Themes</a></li>
                 <li><a href="#" id="TextColor">Create Account</a></li>
-                <span style="cursor:pointer" onclick="SidebarToggle()">&#9776;</span>
+                <span style="cursor:pointer" onclick="SidebarToggle()" id="hamToside">&#9776;</span>
+                <li><a href="javascript:void(0)" id="ExitTonavbar">Leave This</a></li>
             </div>
         </div>
     </nav>
@@ -113,10 +131,15 @@
 
     </div>
 
+    <!-- Function -->
+
+
+
     <div class="pattern"></div>
 
       <script src="./Slider Interface/interface.js"></script> 
       <script src="./eel.js"></script>
       <script src="Control.js"></script>
+      <script src="./ThemeSwicher/script.js"></script>
 </body>
 </html>

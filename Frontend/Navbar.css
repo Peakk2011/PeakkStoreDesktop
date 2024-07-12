@@ -15,6 +15,7 @@ nav {
     max-width: 1100px;
     margin: 0 auto;
     height: 57px;
+    position: relative;
 }
 
 .navbartext img {
@@ -28,9 +29,12 @@ nav {
 }
 
 .navbartext h1 {
-    transform: translateX(-9px);
+    transform: translate(-12px, -0.9px);
     color: #ffffe9;
     font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -0.8px;
+    /* -webkit-text-stroke-width: 0.7px; */
 }
 
 .navbarlink {
@@ -57,6 +61,7 @@ nav {
     width: 120px;
     display: inline-block;
     text-align: center;
+    transition: cubic-bezier(0.1,0.9,0.2,1) 0.8s all;
 }
 
 #TextColor {
@@ -80,7 +85,7 @@ nav {
     width: 100%;
     transform: translateY(-370px);
     opacity: 0;
-    transition: cubic-bezier(0.1,0.9,0.2,1) 0.4s all;
+    transition: cubic-bezier(0.1,0.9,0.2,1) 0.45s all;
 }
 
 .flexnavbartools {
@@ -128,4 +133,17 @@ nav {
 .Navtools {
     max-width: 1100px;
     margin: 0 auto;
+}
+
+#ExitTonavbar {
+    display: none;
+    opacity: 0;
+    transform: translateY(-60px);
+    color: var(--header-text);
+    border: solid 1px var(--header-text);
+    border-radius: 4px;
+    padding: 0.4rem 1.5rem;
+    font-size: 14px;
+    width: 130px;
+    text-align: center;
 }

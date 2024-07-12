@@ -1,0 +1,136 @@
+:root {
+  --back-color: rgb(247, 255, 246);
+  --primary-color: #000000;
+  --header-back: #edf8ed;
+  --header-text: #000;
+}
+
+body {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+nav {
+  background-color: rgb(237, 248, 237);
+  backdrop-filter: blur(20px);
+  border-bottom: solid 1px var(--primary-color);
+}
+
+#TextColor {
+  background-color: var(--primary-color);
+  border: solid 1px var(--primary-color);
+  color: var(--header-back);
+}
+
+#Text {
+  color: var(--header-text);
+  border: var(--header-text) 1px solid;
+}
+
+.navbarlink span {
+  color: var(--header-text);
+}
+
+.NavMore {
+  background-color: var(--header-back);
+  border-bottom: solid 1px var(--primary-color);
+}
+
+.flexnavbartools h2 {
+  color: var(--header-text);
+}
+
+.flexnavbartools hr {
+  border: solid 1px var(--header-text);
+}
+
+.flexnavbartools ion-icon {
+  color: var(--header-text);
+}
+
+.flexnavbartools li a {
+  color: #000;
+} 
+
+.flexnavbartools li a:hover {
+  color: var(--header-text);
+  border-bottom: solid 1px var(--header-text);
+}
+
+/* option for light mode */
+
+.navbartext h1 {
+  color: var(--header-text);
+}
+
+.navbartext img {
+  filter: invert(100%);
+}
+
+.pattern {
+  opacity: 0;
+}
+
+.sidebar {
+  background-color: #131717;
+  border-right: 1px solid #424341;
+}
+
+.sidebarlink .iconslink:hover {
+  background-color: #262e2e;
+}
+
+.iconslink a {
+  color: #839080;
+}
+
+.iconslink ion-icon {
+  color: #839080;
+}
+
+.sidebartext h1 {
+  color: #c0d6bd;
+}
+
+.sidebartext span {
+  color: #c0d6bd;
+}
+
+.BgSidebar {
+  background-color: rgba(19, 23, 23, 0.502);
+  backdrop-filter: blur(5px);
+}  
+
+.sidebar {
+  background-color: #edf8ed;
+  border-right: 1px solid #000;
+}
+
+.sidebarlink .iconslink:hover {
+  background-color: #f7fff6;
+}
+
+.iconslink a {
+  color: #4e554c;
+}
+
+.iconslink ion-icon {
+  color: #4e554c;
+}
+
+.sidebartext h1 {
+  color: #000;
+}
+
+.sidebartext img {
+  filter: invert(100%);
+}
+
+.sidebartext span {
+  color: #000;
+}
+
+.BgSidebar {
+  background-color: rgba(247, 255, 246, 0.62);
+  backdrop-filter: blur(5px);
+}  

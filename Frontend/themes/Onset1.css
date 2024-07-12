@@ -1,0 +1,109 @@
+:root {
+  --back-color: #0a0f0f;
+  --primary-color: #4a4a4a;
+  --header-back: #111617;
+  --header-text: #FEC7BF;
+  /* CEC7BF 3D737F 0b1112 */
+}
+
+body {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+.box img {
+  border: 2px solid var(--primary-color);
+}
+
+nav {
+  background-color: #111617;
+  backdrop-filter: blur(20px);
+  border-bottom: solid 1px var(--primary-color);
+}
+
+#TextColor {
+  background-color: var(--header-text);
+  border: var(--header-text) 1px solid;
+}
+
+#Text {
+  border: var(--header-text) 1px solid;
+  color: var(--header-text);
+}
+
+.navbarlink span {
+  color: var(--header-text);
+}
+
+.NavMore {
+  background-color: var(--header-back);
+  border-bottom: solid 1px var(--primary-color);
+}
+
+.flexnavbartools h2 {
+  color: var(--header-text);
+}
+
+.flexnavbartools hr {
+  border: solid 1px var(--header-text);
+}
+
+.flexnavbartools ion-icon {
+  color: var(--header-text);
+}
+
+.flexnavbartools li a {
+  color: #ccc;
+}
+
+.flexnavbartools li a:hover {
+  color: var(--header-text);
+  border-bottom: solid 1px var(--header-text);
+}
+
+.navbartext h1 {
+  color: var(--header-text);
+}
+
+.navbartext img {
+  filter: hue-rotate(280deg);
+}
+
+.pattern {
+  opacity: 10%;
+  /* filter: brightness(30%); */
+}
+
+.sidebar {
+  background-color: #111617;
+  border-right: 1px solid #4a4a4a;
+}
+
+.sidebarlink .iconslink:hover {
+  background-color: #2c383b;
+}
+
+.iconslink a {
+  color: #bbb;
+}
+
+.iconslink ion-icon {
+  color: #bbb;
+}
+
+.sidebartext h1 {
+  color: #fec7bf;
+}
+
+.sidebartext img {
+  filter: hue-rotate(280deg);
+}
+
+.sidebartext span {
+  color: #fec7bf;
+}
+
+.BgSidebar {
+  background-color: rgba(12, 16, 16, 0.412);
+  backdrop-filter: blur(5px);
+}  
