@@ -16,7 +16,7 @@ function onMouseDown(e){
 
 function onMouseUp(e){
   document.removeEventListener('mousemove',onMouseMove);
-  if(sidebar.style.width < 200) {
+  if(sidebar.style.width < 400) {
     BgSide.style.opacity = "0";
     BgSide.style.display = 'none';
   }
@@ -37,10 +37,13 @@ function SidebarToggle() {
   sidebar.style.cssText = `width: ${ 300 }px`;
   BgSide.style.display = 'block';
   BgSide.style.opacity = "1";
+  Nav.removeEventListener('click', NavMoving)
+  sidebar.style.transition = "all 1s cubic-bezier(0.19, 1, 0.22, 1)";
 }
 
 function CloseNav() {
   sidebar.style.cssText = `width: ${ 0 }px`
   BgSide.style.opacity = "0";
   BgSide.style.display = 'none';
+  sidebar.style.transition = "all 0.2s cubic-bezier(0.19, 1, 0.22, 1)";
 }

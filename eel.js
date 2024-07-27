@@ -4,7 +4,7 @@ document.addEventListener("contextmenu", function (e){
 
 window.onresize = function () {
     if (window.outerWidth < 3840 || window.outerHeight < 2160) {
-        window.resizeTo(360, 810);
+        window.resizeTo(355, 800);
     }
 }
 

@@ -1,7 +1,7 @@
 :root {
   --light: #ffffe9;
   --sky: #11120e;
-  --purple: #f5f0de;
+  --purple: #95a4a1;
   --dark: #C0D6BD;
   --Natural: #f7fff6;
   --Onset: #07161b;
@@ -24,12 +24,13 @@ body {
   text-align: center;
   font-size: 26px;
   width: 100%;
-  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.8s all;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.67s all;
   width: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -150%);
+  transform: translate(-50%, -170%);
+  z-index: 2;
 }
 
 .theme-switches {

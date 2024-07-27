@@ -1,8 +1,8 @@
 :root {
-  --back-color: #F5F0DE;
-  --primary-color: #424341;
+  --back-color: #F4FFFC;
+  --primary-color: #95a4a1;
   --header-back: #121212;
-  --header-text: #f5f0de;
+  --header-text: #000;
 }
 
 body {
@@ -15,13 +15,14 @@ body {
 }
 
 nav {
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(245, 254, 251);
   backdrop-filter: blur(20px);
   border-bottom: solid 1px var(--primary-color);
 }
 
 #TextColor {
   background-color: var(--header-text);
+  color: #F4FFFC;
 }
 
 #Text {
@@ -34,7 +35,7 @@ nav {
 }
 
 .NavMore {
-  background-color: var(--header-back);
+  background-color: rgb(245, 254, 251);
   border-bottom: solid 1px var(--primary-color);
 }
 
@@ -51,12 +52,12 @@ nav {
 }
 
 .flexnavbartools li a {
-  color: #ccc;
+  color: #3c4846;
 } 
 
 .flexnavbartools li a:hover {
-  color: var(--header-text);
-  border-bottom: solid 1px var(--header-text);
+  color: #000;
+  border-bottom: solid 1px #000;
 }
 
 .navbartext h1 {
@@ -68,31 +69,39 @@ nav {
 }
 
 .sidebar {
-  background-color: #121212;
+  background-color: #f5fefb;
   border-right: 1px solid #424341;
 }
 
 .sidebarlink .iconslink:hover {
-  background-color: #222;
+  background-color: #e5edec;
 }
 
 .iconslink a {
-  color: #999;
+  color: #222;
 }
 
 .iconslink ion-icon {
-  color: #999;
+  color: #222;
 }
 
 .sidebartext h1 {
-  color: #f5f0de;
+  color: #000;
 }
 
 .sidebartext span {
-  color: #f5f0de;
+  color: #000;
+}
+
+.sidebartext img {
+  filter: invert(100%);
+}
+
+.navbartext img {
+  filter: invert(100%);
 }
 
 .BgSidebar {
-  background-color: rgba(2, 2, 2, 0.909);
+  background-color: rgba(255, 255, 255, 0.159);
   backdrop-filter: blur(20px);
 }  

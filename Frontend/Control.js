@@ -6,26 +6,38 @@ const SideBarTog = document.getElementById("hamToside");
 const ThemeSelc = document.getElementById("ThemeSelc");
 const ExitToNa = document.getElementById("ExitTonavbar");
 const TextNavbar = document.getElementById("TextNavbar");
+const LinksTools = document.getElementById("FlexLinksTools");
+const PatternBG = document.getElementById('pattern');
+const BGBlur = document.getElementById("bgblur");
+const DragAbleThemeSelc = document.getElementById("DragAbleThemeSelc");
+const DragAbleFlowAreaBack = document.getElementById("DragAbleFlowAreaBack");
+const LeaveDivs = document.getElementById("LeaveDivs");
 
-// NavTools.addEventListener('mouseenter', NavMoving)
-NavTools.addEventListener('mousemove', NavMoving)
-// Nav.addEventListener('mouseenter', NavMoving)
+
 Nav.addEventListener('click', NavMoving)
-// Nav.addEventListener('mouseout', NavMovingOut)
-NavTools.addEventListener('mouseout', NavMovingOut)
+BGBlur.addEventListener("click", NavMovingOut)
 
 function NavMoving() {
     NavTools.style.opacity = "1";
     NavTools.style.transform = "translateY(0px)"
     document.removeEventListener('mouseenter', NavMoving);
+    BGBlur.style.opacity = "1";
 }
 
 function NavMovingOut() {
-    setTimeout(function() {
-        NavTools.style.opacity = "0";
-        NavTools.style.transform = "translateY(-370px)"
-    }, 1000);
+    // setTimeout(function () {
+    NavTools.style.opacity = "0";
+    BGBlur.style.opacity = "0";
+    NavTools.style.transform = "translateY(-370px)"
+    // }, 500);
 }
+
+NavTools.addEventListener('mouseover', () => {
+    NavTools.style.opacity = "1";
+    NavTools.style.transform = "translateY(0px)";
+    document.removeEventListener('mouseenter', NavMoving);
+    console.log('Hover activate');
+})
 
 Theme.addEventListener("click", ThemeToggle);
 ExitToNa.addEventListener("click", ExitThemeSelc);
@@ -44,7 +56,7 @@ function ThemeToggle() {
     }, 400);
     setTimeout(function () {
         ExitToNa.style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             ExitToNa.style.transform = "translateY(0px)";
             ExitToNa.style.opacity = "1";
         }, 20);
@@ -55,7 +67,7 @@ function ThemeToggle() {
 }
 
 function ExitThemeSelc() {
-    setTimeout(function() {
+    setTimeout(function () {
         Theme.style.transform = "translateX(-0px)";
         TextColor.style.transform = "translateX(-0px)";
         SideBarTog.style.transform = "translateX(-0px)";
@@ -64,18 +76,141 @@ function ExitThemeSelc() {
         SideBarTog.style.opacity = "1";
         Nav.addEventListener('click', NavMoving)
     }, 500);
-    setTimeout(function() {
+    setTimeout(function () {
         Theme.style.display = "block";
         TextColor.style.display = "block";
         SideBarTog.style.display = "block";
     }, 300);
-    setTimeout(function() {
+    setTimeout(function () {
         ExitToNa.style.transform = "translateY(-60px)";
         ExitToNa.style.opacity = "0";
-        ThemeSelc.style.transform = "translate(-50%, -150%)"
-        setTimeout(function() {
+        ThemeSelc.style.transform = "translate(-50%, -170%)"
+        setTimeout(function () {
             ExitToNa.style.display = "none";
             TextNavbar.textContent = "Peakk Store";
         }, 80);
     }, 30);
+    if (ThemeSelc.style.transform != "translate(-50%, -170%)") {
+        ThemeSelc.style.transform = "translate(-50%, -170%)";
+    }
+    document.removeEventListener('mousemove', MoveProcesMSEFualt);
+}
+
+ThemeSelc.addEventListener("click", () => {
+
+})
+
+// Right click func
+
+document.onclick = hideMenu;
+document.oncontextmenu = rightClick;
+
+function hideMenu() {
+    document.getElementById("contextMenu").style.display = "none"
+}
+
+function rightClick(e) {
+    e.preventDefault();
+
+    if (document.getElementById(
+        "contextMenu").style.display == "block")
+        hideMenu();
+    else {
+        let menu = document
+            .getElementById("contextMenu")
+
+        menu.style.display = 'block';
+        menu.style.left = e.pageX + "px";
+        menu.style.top = e.pageY + "px";
+    }
+}
+
+// Dragable Theme selecter
+
+DragAbleThemeSelc.addEventListener("mousedown", MouseSlide);
+DragAbleThemeSelc.addEventListener("mouseup", MouseSlideUP);
+DragAbleFlowAreaBack.addEventListener("mousedown", MouseSlideBackToDefault);
+DragAbleFlowAreaBack.addEventListener("mouseup", MouseSlideUPBackToDefault);
+DragAbleFlowAreaBack.addEventListener("mouseup", MoveProcesMSEFualt);
+// DragAbleFlowAreaBack.addEventListener("mousedown",MoveProcesMSEFualt);
+
+// PROBLEM is if user click exit button theme selecter is not go up SOLUTION make another button and Call function
+
+document.addEventListener('mouseup', MouseSlideUP);
+
+function MouseSlide(e) {
+    document.addEventListener('mousemove', MoveProcesMouseThemeSelecter);
+}
+
+// For user drag into area !
+function MouseSlideBackToDefault(e) {
+    document.addEventListener('mousemove', MoveProcesMSEFualt);
+}
+
+function MouseSlideUP(e) {
+    document.removeEventListener('mousemove', MoveProcesMouseThemeSelecter);
+}
+
+// For user drag into area !
+function MouseSlideUPBackToDefault(e) {
+    document.removeEventListener('mousemove', MoveProcesMSEFualt);
+}
+
+// For user drag another area
+
+function MoveProcesMSEFualt(e) {
+    ThemeSelc.style.transform = "translate(-50%,-50%)";
+}
+
+// mouse proces drag theme 
+
+function MoveProcesMouseThemeSelecter(e) {
+    // console.log("DragThemeAllowed"); Success to drag not log
+    ThemeSelc.style.cssText = `transform: translate(-50%,${e.clientY}%)`;
+    // ThemeSelc.style.cssText = `transform: translate(-50%,50%)`;
+    Nav.removeEventListener('click', NavMoving)
+    // 1 Get navbar tray out
+    Theme.style.transform = "translateX(20px)";
+    TextColor.style.transform = "translateX(20px)";
+    SideBarTog.style.transform = "translateX(20px)";
+    Theme.style.opacity = "0";
+    TextColor.style.opacity = "0";
+    SideBarTog.style.opacity = "0";
+    setTimeout(function () {
+        Theme.style.display = "none";
+        TextColor.style.display = "none";
+        SideBarTog.style.display = "none";
+    }, 400);
+    // 2 Get Exit button
+    setTimeout(function () {
+        LeaveDivs.style.display = "block";
+        LeaveDivs.style.opacity = "1";
+        setTimeout(function () {
+            LeaveDivs.style.transform = "translateY(0px)";
+        }, 50);
+    }, 500);
+    Nav.removeEventListener('click', NavMoving)
+    TextNavbar.textContent = "Themes";
+}
+
+LeaveDivs.addEventListener("click", () => {
+    LeaveDivs.style.transform = "translateY(-170px)";
+    document.removeEventListener('mousemove', MoveProcesMSEFualt);
+    // EXIT TO DEFAULT
+    setTimeout(function () {
+        LeaveDivs.style.display = "none";
+        LeaveDivs.style.opacity = "0";
+    }, 400);
+    ExitThemeSelc()
+})
+
+function ExitThemeForDrag() {
+    LeaveDivs.style.transform = "translateY(-170px)";
+    document.removeEventListener('mousemove', MoveProcesMSEFualt);
+    // EXIT TO DEFAULT
+    setTimeout(function () {
+        LeaveDivs.style.display = "none";
+        LeaveDivs.style.opacity = "0";
+    }, 400);
+    ExitThemeSelc()
 }

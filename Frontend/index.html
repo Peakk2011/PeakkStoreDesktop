@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,52 +14,56 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
-    
+
+    <div class="pattern" id="pattern"></div>
+
+
     <div class="sidebar">
         <div class="sidebarcon" id="Sidebar">
-          <div class="sidebartext">
-            <span style="cursor:pointer" onclick="CloseNav()">&#9776;</span>
-            <img src="./Image/PeakkSolid.png" alt="">
-            <h1>Peakk Store</h1>
-          </div>
-          <div class="sidebarlink">
-            <div class="iconslink">
-                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                <li><a href="#">Developer Tools</a></li>
+            <div class="sidebartext">
+                <span style="cursor:pointer" onclick="CloseNav()">&#9776;</span>
+                <img src="./Image/PeakkSolid.png" alt="">
+                <h1>Peakk Store</h1>
             </div>
-            <div class="iconslink">
-                <ion-icon name="lock-closed-outline"></ion-icon>
-                <li><a href="#">Login & Register</a></li>
+            <div class="sidebarlink">
+                <div class="iconslink">
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                    <li><a href="#">Developer Tools</a></li>
+                </div>
+                <div class="iconslink">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <li><a href="#">Login & Register</a></li>
+                </div>
+                <div class="iconslink">
+                    <ion-icon name="crop-outline"></ion-icon>
+                    <li><a href="#">Open phone view</a></li>
+                </div>
+                <div class="iconslink">
+                    <ion-icon name="language-outline"></ion-icon>
+                    <li><a href="#">Language</a></li>
+                </div>
+                <div class="iconslink">
+                    <ion-icon name="color-fill-outline"></ion-icon>
+                    <li><a href="#">Themes</a></li>
+                </div>
+                <div class="iconslink">
+                    <ion-icon name="help-outline"></ion-icon>
+                    <li><a href="#">Help</a></li>
+                </div>
+                <div class="iconslink">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                    <li><a href="#">Feedback</a></li>
+                </div>
             </div>
-            <div class="iconslink">
-                <ion-icon name="crop-outline"></ion-icon>
-                <li><a href="#">Open phone view</a></li>
-            </div>
-            <div class="iconslink">
-                <ion-icon name="language-outline"></ion-icon>
-                <li><a href="#">Language</a></li>
-            </div>
-            <div class="iconslink">
-                <ion-icon name="color-fill-outline"></ion-icon>
-                <li><a href="#">Themes</a></li>
-            </div>
-            <div class="iconslink">
-                <ion-icon name="help-outline"></ion-icon>
-                <li><a href="#">Help</a></li>
-            </div>
-            <div class="iconslink">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-                <li><a href="#">Feedback</a></li>
-            </div>
-          </div>
         </div>
         <div class="dragholder"></div>
-      </div>
+    </div>
 
-      <div class="BgSidebar"></div>
+    <div class="BgSidebar"></div>
 
-      <nav id="Navbar">
+    <nav id="Navbar" >
         <div class="navbar">
             <div class="navbartext">
                 <img src="./Image/PeakkSolid.png" alt="">
@@ -79,11 +84,18 @@
                     <div data-theme="solid" class="switch" id="switch-8"></div>
                 </div>
             </div>
+            <div class="DragAbleThemeSelc" id="DragAbleThemeSelc">
+                <div class="DragAbleThemeChildElem"></div>
+                <div class="DragAbleFlowAreaBack" id="DragAbleFlowAreaBack"></div>
+            </div>
             <div class="navbarlink">
                 <li><a href="javascript:void(0)" id="Text">Themes</a></li>
                 <li><a href="#" id="TextColor">Create Account</a></li>
-                <span style="cursor:pointer" onclick="SidebarToggle()" id="hamToside">&#9776;</span>
+                <div class="ExitNavbarCheck" onclick="SidebarToggle()" id="hamToside">
+                    <span style="cursor:pointer">&#9776;</span>
+                </div>
                 <li><a href="javascript:void(0)" id="ExitTonavbar">Leave This</a></li>
+                <div class="LeaveDivsFromSlideThemeDiv" id="LeaveDivs">Leave This</div>
             </div>
         </div>
     </nav>
@@ -92,7 +104,7 @@
 
         <div class="Navtools">
             <div class="NavtoolsCon">
-                <div class="flexnavbartools">
+                <div class="flexnavbartools" id="FlexLinksTools">
                     <div id="tools1">
                         <ion-icon name="bag-handle-sharp"></ion-icon>
                         <h2>FOR PEAKK STORE</h2>
@@ -131,15 +143,36 @@
 
     </div>
 
+    <div id="contextMenu" class="context-menu">
+        <div class="ContactMenuContent">
+            <ul>
+                <li id="FirstLink"><a href="#"><ion-icon name="open-outline"></ion-icon>Open Peakk Portfolio</a></li>
+                <li><a href="#"><ion-icon name="open-outline"></ion-icon>Open Peakk store for phone</a></li>
+                <li><a href="#"><ion-icon name="enter-outline"></ion-icon>Login Peakk store</a></li>
+                <li><a href="#"><ion-icon name="grid-outline"></ion-icon>Menu list</a></li>
+                <li><a href="#"><ion-icon name="options-outline"></ion-icon>Navbar Tools</a></li>
+                <li><a href="#"><ion-icon name="color-fill-outline"></ion-icon>Theme Swicher</a></li>
+                <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon>About Peakk store</a></li>
+            </ul>
+            <div class="IconsLinks">
+                <div class="IconslinksContent">
+                    <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="language-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="help-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bgblur"></div>
+
     <!-- Function -->
 
-
-
-    <div class="pattern"></div>
-
-      <script src="./Slider Interface/interface.js"></script> 
-      <script src="./eel.js"></script>
-      <script src="Control.js"></script>
-      <script src="./ThemeSwicher/script.js"></script>
+    <script src="./Slider Interface/interface.js"></script>
+    <script src="./eel.js"></script>
+    <script src="Control.js"></script>
+    <script src="./ThemeSwicher/script.js"></script>
 </body>
+
 </html>
