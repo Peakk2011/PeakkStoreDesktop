@@ -24,18 +24,3 @@ function getDims ()
       document.body.clientHeight
   ];
 }
-
-function fixViewport (e)
-{
-  const newdims = getDims();
-  if (newdims[0] != dims[0])
-  {
-    dims = newdims;
-    main.height = dims[1];
-    main.style.height = dims[1] + "px";
-  }
-}
-            
-window.addEventListener("resize", fixViewport);
-            
-fixViewport();

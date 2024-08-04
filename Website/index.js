@@ -1,6 +1,59 @@
 // Peakk copylight form Peakk store index.js javascript code update 4/8/24
 // make sure and go down to the second page
 
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'This store only on mobile platform not will support on Mac OS';
+    for (var i = 0; i < 5; i++) {
+      createTimeout(i);
+    }
+    function createTimeout(num) {
+      setTimeout(function() {
+        alert("This store only on mobile platform will not support on Mac OS");
+      }, 9000 * num);
+    }
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    // os = 'iOS';
+    document.title = 'Peakk Store';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'This store only on mobile platform not will support on Windows';
+    for (var i = 0; i < 5; i++) {
+      createTimeout(i);
+    }
+    function createTimeout(num) {
+      setTimeout(function() {
+        alert("This store only on mobile platform will not support on Windows");
+      }, 9000 * num);
+    }
+  } else if (/Android/.test(userAgent)) {
+    // os = 'Android';
+    document.title = 'Peakk Store';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'This store only on mobile platform not will support on Linux';
+    for (var i = 0; i < 5; i++) {
+      createTimeout(i);
+    }
+    function createTimeout(num) {
+      setTimeout(function() {
+        alert("This store only on mobile platform will not support on Linux");
+      }, 9000 * num);
+    }
+  }
+
+  return os;
+}
+
+window.close();
+
+alert(getOS());
+
 window.addEventListener("scroll",()=>{
   if (this.scrollY != 0) {
     window.scrollBy(0, 0);
