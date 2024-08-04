@@ -18,6 +18,16 @@
     height: 100vh;
     position: absolute;
     z-index: 100;
+    animation: BGfade 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes BGfade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .content {

@@ -53,6 +53,10 @@
                     <li><a href="#">Help</a></li>
                 </div>
                 <div class="iconslink">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <li><a href="javascript:void(0)" onclick="OpenSettings()">Settings</a></li>
+                </div>
+                <div class="iconslink">
                     <ion-icon name="paper-plane-outline"></ion-icon>
                     <li><a href="#">Feedback</a></li>
                 </div>
@@ -63,7 +67,7 @@
 
     <div class="BgSidebar"></div>
 
-    <nav id="Navbar" >
+    <nav id="Navbar">
         <div class="navbar">
             <div class="navbartext">
                 <img src="./Image/PeakkSolid.png" alt="">
@@ -156,7 +160,8 @@
             </ul>
             <div class="IconsLinks">
                 <div class="IconslinksContent">
-                    <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+                    <a href="javascript:void(0)" onclick="OpenSettings()"><ion-icon
+                            name="settings-outline"></ion-icon></a>
                     <a href="#"><ion-icon name="language-outline"></ion-icon></a>
                     <a href="#"><ion-icon name="search-outline"></ion-icon></a>
                     <a href="#"><ion-icon name="help-outline"></ion-icon></a>
@@ -166,6 +171,32 @@
     </div>
 
     <div id="bgblur"></div>
+
+    <!-- Settings -->
+
+    <div class="wrapper" id="Drag">
+        <div class="HeadSettings">
+            <div class="HeadSettContent">
+                <h1>Peakk Store Settings</h1>
+                <div class="exitbutton">
+                    <h1 onclick="CloseSettings()">×</h1>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active">
+                    <div class="tabcontent">
+                        <p>Settings</p>
+                    </div>
+                    <button class="close-tab">×</button>
+                </div>
+                <button class="add-tab">+</button>
+            </div>
+            <!-- EndTabs -->
+        </div>
+    </div>
 
     <!-- Function -->
 

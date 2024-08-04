@@ -1,14 +1,25 @@
-// Peakk copylight form Peakk store index.js javascript code update 3/7/24
+// Peakk copylight form Peakk store index.js javascript code update 4/8/24
+// make sure and go down to the second page
+
+window.addEventListener("scroll",()=>{
+  if (this.scrollY != 0) {
+    window.scrollBy(0, 0);
+  }
+})
+
+if (this.scrollY != 0) {
+  window.scrollBy(0, 0);
+}
 
 window.onresize = function () {
   if (window.outerWidth < 445 || window.outerHeight < 800) {
-      window.resizeTo(360, 810);
+    window.resizeTo(360, 810);
   } else if (window.outerWidth < 4000 || window.outerHeight < 4000) {
-      window.resizeTo(360, 810);
+    window.resizeTo(360, 810);
   }
 }
 
-document.addEventListener('contextmenu', function(event) {
+document.addEventListener('contextmenu', function (event) {
   event.preventDefault();
 });
 
@@ -56,22 +67,62 @@ function GetToggleOUST() {
 
 // background slider 
 
-document.getElementById("Backgro").addEventListener("touchmove",() => {
-  document.getElementById("Backgro").style.opacity = "1";
-  document.getElementById("Backgro").style.visibility = "hidden";
-  document.getElementById("Backgro").style.width = "0px";
-  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)";
-  // Nav and bottom sidenav
-  ButtonToggle.style.display = ("block")
-  document.getElementById("NavbarVeryMainNo").style.top = ('0px');
-  document.getElementById('MainBottomNavbar').style.bottom = ('0px');
-  CloseSearch();
-  CloseLanguageSetup();
-  ThemeCloseCheck();
-  MenuLinksCloseCheck();
-}) 
+// document.getElementById("Backgro").addEventListener("touchmove", funcSidebar())
 
-document.getElementById("MainNavSideOFF").addEventListener("touchmove",() => {
+document.getElementById("Backgro").addEventListener("touchmove", () => {
+  document.getElementById("Backgro").style.opacity = "1";
+  document.getElementById("Backgro").style.visibility = "hidden";
+  document.getElementById("Backgro").style.width = "0px";
+  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)";
+  // Nav and bottom sidenav
+  ButtonToggle.style.display = ("block")
+  document.getElementById("NavbarVeryMainNo").style.top = ('0px');
+  document.getElementById('MainBottomNavbar').style.bottom = ('0px');
+  // function
+  CloseSearch();
+  CloseLanguageSetup();
+  ThemeCloseCheck();
+  MenuLinksCloseCheck();
+  GetToggleOUST();
+  if (document.getElementById("MainNavSideOFF").style.transform == "translateX(-310px)") {
+    document.getElementById("MainNavSideOFF").style.display = "none";
+  } else {
+    document.getElementById("MainNavSideOFF").style.display = "block";
+  }
+  // 
+  event.preventDefault();
+})
+
+function funcSidebar() {
+  document.getElementById("Backgro").style.opacity = "1";
+  document.getElementById("Backgro").style.visibility = "hidden";
+  document.getElementById("Backgro").style.width = "0px";
+  document.getElementById("MainNavSideOFF").style.transform = "translateX(-310px)";
+  // Nav and bottom sidenav
+  ButtonToggle.style.display = ("block")
+  document.getElementById("NavbarVeryMainNo").style.top = ('0px');
+  document.getElementById('MainBottomNavbar').style.bottom = ('0px');
+  // function
+  CloseSearch();
+  CloseLanguageSetup();
+  ThemeCloseCheck();
+  MenuLinksCloseCheck();
+  GetToggleOUST();
+  if (document.getElementById("MainNavSideOFF").style.transform == "translateX(-310px)") {
+    document.getElementById("MainNavSideOFF").style.display = "none";
+  } else {
+    document.getElementById("MainNavSideOFF").style.display = "block";
+  }
+  // 
+  // event.preventDefault();
+}
+
+document.getElementById("Backgro").addEventListener("click", () => {
+  funcSidebar()
+  e.preventDefault();
+})
+
+document.getElementById("MainNavSideOFF").addEventListener("touchmove", () => {
   document.getElementById("Backgro").style.opacity = "1";
   document.getElementById("Backgro").style.visibility = "hidden";
   document.getElementById("Backgro").style.width = "0px";
@@ -84,7 +135,8 @@ document.getElementById("MainNavSideOFF").addEventListener("touchmove",() => {
   CloseLanguageSetup();
   ThemeCloseCheck();
   MenuLinksCloseCheck();
-}) 
+  GetToggleOUST()
+})
 
 // const myTimeout = setTimeout(myGreeting, 500);
 
@@ -468,23 +520,23 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 }
 
-document.getElementById("Navbi").addEventListener('touchmove',() => {
+document.getElementById("Navbi").addEventListener('touchmove', () => {
   document.getElementById("MainBottomNavbar").style.bottom = "0px"
   // document.getElementById("MainBottomNavbar").style.bottom = "-60px";
 })
 
-document.getElementById("Navbi").addEventListener('touchstart',() => {
+document.getElementById("Navbi").addEventListener('touchstart', () => {
   document.body.style.overflow = "hidden";
 })
 
-document.getElementById("Navbi").addEventListener('touchend',() => {
-  setTimeout(function() {
+document.getElementById("Navbi").addEventListener('touchend', () => {
+  setTimeout(function () {
     document.body.style.overflow = "auto";
     document.body.style.overflowX = "hidden";
   }, 100);
 })
 
-SidebarDragable.addEventListener("touchmove",() => {
+SidebarDragable.addEventListener("touchmove", () => {
   // MainNavSideOFF
   GetToggleON()
 })
@@ -594,7 +646,7 @@ function ExitThis() {
   document.getElementById("Backgro").style.opacity = "1"
   document.getElementById("Backgro").style.visibility = "hidden"
   document.getElementById("Backgro").style.width = "0px"
-    document.getElementById("MenuTabsLinks").style.display = "block"
+  document.getElementById("MenuTabsLinks").style.display = "block"
   document.getElementById("CloseMenuTabs").style.display = "none"
   document.getElementById("CloseMenuBtn").style.display = "none"
   document.getElementById("OpenTabsCheck").style.display = "block"
@@ -633,6 +685,6 @@ function ExtANYfucnctionSettings() {
 
 // Navbar swipe to open search
 
-document.getElementById("NavbarVeryMainNo").addEventListener("touchmove",() => {
+document.getElementById("NavbarVeryMainNo").addEventListener("touchmove", () => {
   GetSearchOn()
 });
